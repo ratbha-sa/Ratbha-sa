@@ -57,10 +57,6 @@
         }
 
         /* Hero Section */
-        .hero-banner {
-            width: 100%;
-            display: block;
-        }
         .hero-banner img {
             width: 100%;
             height: auto;
@@ -82,10 +78,6 @@
             margin-bottom: 15px;
         }
 
-        .price-container {
-            margin: 15px 0;
-        }
-
         .main-price {
             font-size: 32px;
             color: var(--secondary-color);
@@ -103,26 +95,7 @@
             font-weight: 600;
         }
 
-        /* Image Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin: 20px 0;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s;
-        }
-        
-        .gallery-grid img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Features Section */
+        /* Features */
         .features {
             background: var(--white);
             padding: 35px 25px;
@@ -153,10 +126,6 @@
         }
 
         /* Offers Cards */
-        .offers-wrapper {
-            margin: 30px 0;
-        }
-
         .offer-card {
             background: var(--white);
             border: 2px solid #eee;
@@ -189,17 +158,6 @@
             font-weight: 700;
         }
 
-        .offer-details h4 {
-            font-size: 19px;
-            color: var(--primary-color);
-        }
-
-        .offer-details span {
-            color: var(--accent-color);
-            font-weight: 700;
-            font-size: 18px;
-        }
-
         .savings-tag {
             background: #ffecec;
             color: #d63031;
@@ -209,7 +167,7 @@
             font-weight: 700;
         }
 
-        /* Form Styling */
+        /* Checkout Form & Dynamic Summary */
         .order-form-box {
             background: var(--white);
             padding: 40px 25px;
@@ -219,24 +177,32 @@
             border-top: 5px solid var(--secondary-color);
         }
 
-        .form-title {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 30px;
+        .order-summary-box {
+            background: #fdf7f2;
+            border: 2px dashed var(--secondary-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .summary-row.total {
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            margin-top: 10px;
+            font-weight: 900;
+            font-size: 20px;
             color: var(--primary-color);
         }
 
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
+        .input-group { margin-bottom: 20px; }
+        
         input, select, textarea {
             width: 100%;
             padding: 14px;
@@ -245,15 +211,14 @@
             font-size: 16px;
             outline: none;
             transition: 0.3s;
-            background: #fdfdfd;
         }
 
-        input:focus, select:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 8px rgba(230, 126, 34, 0.2);
+        /* Pulse Animation for Submit Button */
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 8px 25px rgba(230, 126, 34, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4); }
         }
-
-        .required-star { color: #d63031; }
 
         .submit-btn {
             background: var(--secondary-color);
@@ -265,61 +230,47 @@
             font-size: 22px;
             font-weight: 900;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
-            margin-top: 15px;
+            margin-top: 10px;
+            animation: pulse-btn 2s infinite ease-in-out;
             transition: 0.3s;
         }
 
         .submit-btn:hover {
             background: #d35400;
-            transform: translateY(-2px);
+            animation: none;
         }
 
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-
-        /* Tech Details Table */
         .specs-table {
             width: 100%;
-            margin-top: 30px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #eee;
-        }
-
-        .specs-table tr {
-            background: white;
-            border-bottom: 1px solid #eee;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
         .specs-table td {
-            padding: 15px;
-            font-size: 15px;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
         }
 
-        .specs-table td:first-child {
-            font-weight: 700;
-            background: #fafafa;
-            width: 35%;
-        }
+        .specs-table td:first-child { font-weight: 700; width: 40%; background: #f9f9f9; }
 
-        /* Footer */
         footer {
             background: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 50px;
+            padding: 30px;
+            margin-top: 40px;
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr; }
-            .product-title { font-size: 22px; }
-            .offer-card { flex-direction: column; text-align: center; gap: 10px; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -333,48 +284,36 @@
 
     <main class="container">
         
-        <!-- Hero Banner -->
         <div class="hero-banner">
-            <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="Banner المنتج الرئيسي">
+            <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="Banner">
         </div>
 
-        <!-- Product Intro -->
         <section class="product-intro">
-            <h1 class="product-title">خزانة لتنظيم الاحذية احترافية - مكونة من 9 أرفف</h1>
-            <div class="price-container">
-                <span class="main-price">133 ريال فقط</span>
-            </div>
+            <h1 class="product-title">خزانة لتنظيم الاحذية احترافية - 9 أرفف</h1>
+            <div class="main-price">133 ريال فقط</div>
             <div class="shipping-badge">شحن مجاني لجميع مناطق المملكة 🚚</div>
         </section>
 
         <!-- Features -->
         <section class="features">
-            <h2 class="section-h2">مميزات المنتج</h2>
-            <div class="feature-item"><i>✔</i> تحافظ على أحذيتك مرتبة ونظيفة في مكان واحد.</div>
-            <div class="feature-item"><i>✔</i> تحتوي على 9 أدوار تسع مجموعة كبيرة جداً من الأحذية.</div>
-            <div class="feature-item"><i>✔</i> تصميم متين وثابت مع قوائم معدنية عالية الجودة.</div>
-            <div class="feature-item"><i>✔</i> سهل التفكيك والتركيب للتنقل بسهولة تامة.</div>
-            <div class="feature-item"><i>✔</i> الجراب مصنوع من قماش فاخر قابل للغسل.</div>
-            <div class="feature-item"><i>✔</i> مزودة بجيوب جانبية لمساحة تخزين إضافية.</div>
-            <div class="feature-item"><i>✔</i> توفر مساحة هائلة في الغرفة وتمنع الفوضى.</div>
-            <div class="feature-item"><i>✔</i> جودة عالية تضمن لك عمر استخدام طويل جداً.</div>
+            <h2 class="section-h2">لماذا تختار هذا المنظم؟</h2>
+            <div class="feature-item"><i>✔</i> سعة ضخمة لـ 27-30 زوج من الأحذية.</div>
+            <div class="feature-item"><i>✔</i> هيكل معدني مقاوم للصدأ وقوي التحمل.</div>
+            <div class="feature-item"><i>✔</i> غطاء قماشي يحمي أحذيتك من الغبار والرطوبة.</div>
+            <div class="feature-item"><i>✔</i> سهل التركيب في 10 دقائق بدون أدوات.</div>
         </section>
 
-        <!-- Gallery -->
+        <!-- Image Gallery -->
         <section class="gallery-grid">
-            <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="صورة المنتج 1">
-            <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="صورة المنتج 2">
-            <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="صورة المنتج 3">
-            <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="صورة المنتج 4">
-            <img src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="صورة المنتج 5">
-            <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="صورة المنتج 6">
+            <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="1">
+            <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="2">
         </section>
 
-        <!-- Offers -->
+        <!-- Offers Selection -->
         <section class="offers-wrapper">
-            <h2 class="section-h2">اختر العرض المناسب لك</h2>
+            <h2 class="section-h2">العروض الحصرية لفترة محدودة</h2>
             
-            <div class="offer-card" onclick="selectOffer(1, 133, this)">
+            <div class="offer-card" onclick="updateOrder(1, 133, 'بدون خصم', this)">
                 <div class="offer-details">
                     <h4>قطعة واحدة</h4>
                     <span>133 ريال</span>
@@ -382,148 +321,125 @@
                 <div class="savings-tag">شحن مجاني</div>
             </div>
 
-            <div class="offer-card active" onclick="selectOffer(2, 184, this)">
+            <div class="offer-card active" onclick="updateOrder(2, 184, 'وفرت 82 ريال', this)">
                 <div class="offer-details">
-                    <h4>قطعتين</h4>
+                    <h4>قطعتين (الأكثر طلباً)</h4>
                     <span>184 ريال</span>
                 </div>
                 <div class="savings-tag">خصم 82 ريال</div>
             </div>
 
-            <div class="offer-card best-value" onclick="selectOffer(3, 229, this)">
+            <div class="offer-card best-value" onclick="updateOrder(3, 229, 'وفرت 170 ريال', this)">
                 <div class="offer-details">
                     <h4>3 قطع</h4>
                     <span>229 ريال</span>
                 </div>
                 <div class="savings-tag">خصم 170 ريال</div>
             </div>
-
-            <div class="offer-card" onclick="selectOffer(4, 308, this)">
-                <div class="offer-details">
-                    <h4>4 قطع</h4>
-                    <span>308 ريال</span>
-                </div>
-                <div class="savings-tag">خصم 224 ريال</div>
-            </div>
         </section>
 
         <!-- Checkout Form -->
         <section id="checkout" class="order-form-box">
-            <h3 class="form-title">سجل بياناتك لإتمام الطلب</h3>
+            <h3 style="text-align:center; margin-bottom:25px;">أدخل بيانات الشحن</h3>
+            
             <form id="landingForm">
                 <div class="input-group">
-                    <label>الاسم كامل <span class="required-star">*</span></label>
-                    <input type="text" name="full_name" placeholder="أدخل اسمك الثلاثي" required>
+                    <label>الاسم بالكامل</label>
+                    <input type="text" name="full_name" placeholder="مثال: محمد أحمد" required>
                 </div>
 
                 <div class="input-group">
-                    <label>رقم الجوال <span class="required-star">*</span></label>
+                    <label>رقم الجوال</label>
                     <input type="tel" name="phone" placeholder="05xxxxxxxx" required>
                 </div>
 
                 <div class="input-group">
-                    <label>المدينة <span class="required-star">*</span></label>
+                    <label>المدينة</label>
                     <select name="city" required>
-                        <option value="">-- اختر المنطقة --</option>
                         <option value="الرياض">الرياض</option>
                         <option value="جدة">جدة</option>
-                        <option value="مكة المكرمة">مكة المكرمة</option>
-                        <option value="المدينة المنورة">المدينة المنورة</option>
                         <option value="الدمام">الدمام</option>
-                        <option value="الخبر">الخبر</option>
-                        <option value="القصيم">القصيم</option>
-                        <option value="أبها">أبها</option>
-                        <option value="تبوك">تبوك</option>
-                        <option value="حائل">حائل</option>
-                        <option value="جازان">جازان</option>
-                        <option value="نجران">نجران</option>
-                        <option value="الباحة">الباحة</option>
-                        <option value="الجوف">الجوف</option>
-                        <option value="الحدود الشمالية">الحدود الشمالية</option>
-                        <option value="الطائف">الطائف</option>
-                        <option value="القطيف">القطيف</option>
-                        <option value="ينبع">ينبع</option>
+                        <option value="مكة">مكة المكرمة</option>
                     </select>
                 </div>
 
-                <div class="input-group">
-                    <label>العنوان <span class="required-star">*</span></label>
-                    <input type="text" name="address" placeholder="اسم الحي / الشارع" required>
+                <!-- Dynamic Order Summary -->
+                <div class="order-summary-box">
+                    <h4 style="margin-bottom:15px; color:var(--secondary-color)">ملخص الطلب:</h4>
+                    <div class="summary-row">
+                        <span>الكمية المختارة:</span>
+                        <span id="res_qty" style="font-weight:bold;">2 قطعة</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>قيمة التوفير:</span>
+                        <span id="res_discount" style="color:var(--accent-color); font-weight:bold;">وفرت 82 ريال</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>مصاريف الشحن:</span>
+                        <span style="color:var(--accent-color); font-weight:bold;">مجاني 0.00 ريال</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>الإجمالي النهائي:</span>
+                        <span id="res_total">184 ريال</span>
+                    </div>
                 </div>
 
-                <div class="input-group">
-                    <label>ملاحظات إضافية</label>
-                    <textarea name="notes" rows="3" placeholder="أي تفاصيل أخرى بخصوص التوصيل"></textarea>
-                </div>
+                <input type="hidden" id="final_qty" name="quantity" value="2">
+                <input type="hidden" id="final_price" name="total_price" value="184">
 
-                <!-- Hidden values to catch order details -->
-                <input type="hidden" id="qty_field" name="quantity" value="2">
-                <input type="hidden" id="price_field" name="total_price" value="184">
-
-                <button type="submit" id="submitBtn" class="submit-btn">تأكيد الطلب</button>
+                <button type="submit" class="submit-btn">تأكيد الطلب - الدفع عند الاستلام</button>
             </form>
         </section>
 
-        <!-- Technical Specs -->
+        <!-- Specs Table -->
         <section class="features">
-            <h2 class="section-h2">تفاصيل سريعة</h2>
+            <h2 class="section-h2">المواصفات الفنية</h2>
             <table class="specs-table">
-                <tr><td>اسم الماركة</td><td>Generic</td></tr>
-                <tr><td>مدة الضمان</td><td>6 شهور (دوزن)</td></tr>
-                <tr><td>الأبعاد</td><td>60 × 30 × 158 سم</td></tr>
-                <tr><td>الخامة</td><td>معدن وقماش عالي الجودة</td></tr>
-                <tr><td>عدد الأرفف</td><td>9-10 أرفف تخزين</td></tr>
-                <tr><td>بلد الصنع</td><td>الصين</td></tr>
+                <tr><td>المواد</td><td>أنابيب فولاذ + قماش غير منسوج</td></tr>
+                <tr><td>الأبعاد</td><td>158 × 60 × 30 سم</td></tr>
+                <tr><td>عدد الأدوار</td><td>9 أدوار تخزين</td></tr>
+                <tr><td>المميزات</td><td>مقاوم للرطوبة، جيوب جانبية</td></tr>
             </table>
         </section>
 
     </main>
 
     <footer>
-        <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2026</p>
-            <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">الدفع عند الاستلام متاح | شحن آمن وسريع</p>
-        </div>
+        <p>جميع الحقوق محفوظة &copy; 2026</p>
+        <p style="font-size:12px; opacity:0.8; margin-top:5px;">توصيل سريع | دفع عند الاستلام | ضمان جودة</p>
     </footer>
 
     <script>
-        // رابط السكريبت الخاص بك
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec';
-        
-        function selectOffer(qty, price, element) {
-            document.querySelectorAll('.offer-card').forEach(c => c.classList.remove('active'));
+        // دالة تحديث ملخص الطلب ديناميكياً
+        function updateOrder(qty, price, discount, element) {
+            // تحديث الشكل البصري للكروت
+            document.querySelectorAll('.offer-card').forEach(card => card.classList.remove('active'));
             element.classList.add('active');
-            document.getElementById('qty_field').value = qty;
-            document.getElementById('price_field').value = price;
-            document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+
+            // تحديث النصوص في الملخص
+            document.getElementById('res_qty').innerText = qty + " قطعة";
+            document.getElementById('res_total').innerText = price + " ريال";
+            document.getElementById('res_discount').innerText = discount;
+
+            // تحديث القيم المخفية للإرسال
+            document.getElementById('final_qty').value = qty;
+            document.getElementById('final_price').value = price;
+
+            // انتقال سلس للملخص عند التغيير
+            document.querySelector('.order-summary-box').style.backgroundColor = "#fff4eb";
+            setTimeout(() => {
+                document.querySelector('.order-summary-box').style.backgroundColor = "#fdf7f2";
+            }, 500);
         }
 
-        const form = document.getElementById('landingForm');
-        const submitBtn = document.querySelector('.submit-btn');
-
-        form.addEventListener('submit', e => {
+        // معالجة إرسال النموذج
+        document.getElementById('landingForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            const name = this.full_name.value;
+            const total = document.getElementById('final_price').value;
             
-            // تعطيل الزر لمنع الإرسال المتعدد
-            submitBtn.disabled = true;
-            submitBtn.innerText = "جاري إرسال الطلب...";
-
-            fetch(scriptURL, { 
-                method: 'POST', 
-                body: new FormData(form)
-            })
-            .then(response => {
-                alert('شكراً لك! تم استلام طلبك بنجاح. سنتصل بك قريباً لتأكيد الشحن.');
-                submitBtn.disabled = false;
-                submitBtn.innerText = "تأكيد الطلب";
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.');
-                submitBtn.disabled = false;
-                submitBtn.innerText = "تأكيد الطلب";
-            });
+            alert(`شكراً ${name}! تم استلام طلبك بنجاح.\nالقيمة الإجمالية: ${total} ريال.\nسنتصل بك خلال 24 ساعة لتأكيد موعد التوصيل.`);
+            this.reset();
         });
     </script>
 </body>
