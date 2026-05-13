@@ -1,1483 +1,1421 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>خزانة لتنظيم الأحذية مكونة من 9 أرفف | رتّبها Ratbha</title>
-
-  <!-- SEO -->
-  <meta name="description" content="اطلب الآن خزانة تنظيم الأحذية المكونة من 9 أرفف بتصميم عملي فاخر يوفر المساحة ويحافظ على الأحذية مرتبة ونظيفة مع شحن مجاني والدفع عند الاستلام داخل السعودية." />
-  <meta name="keywords" content="خزانة أحذية, منظم أحذية, خزانة 9 أرفف, ترتيب الأحذية, تخزين الأحذية, رفوف أحذية, خزانة قماش, منظم منزلي, متجر سعودي, رتّبها" />
-  <meta name="author" content="Ratbha Store">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="خزانة لتنظيم الأحذية مكونة من 9 أرفف | رتّبها" />
-  <meta property="og:description" content="وفر المساحة ونظم أحذيتك بسهولة مع خزانة الأحذية العملية المكونة من 9 أرفف - شحن مجاني والدفع عند الاستلام." />
-  <meta property="og:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ar_SA" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="خزانة لتنظيم الأحذية مكونة من 9 أرفف">
-  <meta name="twitter:description" content="أفضل حل لتنظيم الأحذية وتوفير المساحة داخل المنزل.">
-  <meta name="twitter:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"خزانة لتنظيم الأحذية مكونة من 9 أرفف",
-    "image":[
-      "https://i.ibb.co/wrJBNkg4/image-5.webp",
-      "https://i.ibb.co/RqP3G3d/image-7.webp"
-    ],
-    "description":"خزانة عملية لتنظيم الأحذية مكونة من 9 أرفف بخامة عالية الجودة مع شحن مجاني والدفع عند الاستلام.",
-    "brand":{
-      "@type":"Brand",
-      "name":"Generic"
-    },
-    "offers":{
-      "@type":"Offer",
-      "priceCurrency":"SAR",
-      "price":"133",
-      "availability":"https://schema.org/InStock"
-    },
-    "aggregateRating":{
-      "@type":"AggregateRating",
-      "ratingValue":"4.9",
-      "reviewCount":"287"
-    }
-  }
-  </script>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    :root{
-      --primary:#7c3aed;
-      --secondary:#9333ea;
-      --dark:#0f172a;
-      --light:#f8fafc;
-      --glass:rgba(255,255,255,.08);
-      --border:rgba(255,255,255,.12);
-      --success:#10b981;
-      --danger:#ef4444;
-      --gold:#fbbf24;
-    }
-
-    body{
-      font-family:'Cairo',sans-serif;
-      background:#050816;
-      color:#fff;
-      overflow-x:hidden;
-      user-select:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    .container{
-      width:min(1200px,92%);
-      margin:auto;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar{
-      width:10px;
-    }
-
-    ::-webkit-scrollbar-track{
-      background:#111827;
-    }
-
-    ::-webkit-scrollbar-thumb{
-      background:linear-gradient(var(--primary),var(--secondary));
-      border-radius:20px;
-    }
-
-    /* Loading */
-    #loader{
-      position:fixed;
-      inset:0;
-      background:#020617;
-      z-index:99999;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:.5s;
-    }
-
-    .loader-circle{
-      width:90px;
-      height:90px;
-      border:5px solid rgba(255,255,255,.1);
-      border-top:5px solid var(--primary);
-      border-radius:50%;
-      animation:spin 1s linear infinite;
-    }
-
-    @keyframes spin{
-      to{transform:rotate(360deg);}
-    }
-
-    /* Progress Bar */
-    #progressBar{
-      position:fixed;
-      top:0;
-      right:0;
-      width:0%;
-      height:4px;
-      background:linear-gradient(90deg,var(--primary),#ec4899);
-      z-index:999999;
-    }
-
-    /* Background Shapes */
-    .bg-shape{
-      position:fixed;
-      border-radius:50%;
-      filter:blur(100px);
-      opacity:.2;
-      z-index:-1;
-      animation:float 10s infinite alternate ease-in-out;
-    }
-
-    .shape1{
-      width:300px;
-      height:300px;
-      background:#7c3aed;
-      top:-100px;
-      right:-100px;
-    }
-
-    .shape2{
-      width:350px;
-      height:350px;
-      background:#2563eb;
-      bottom:-100px;
-      left:-100px;
-    }
-
-    @keyframes float{
-      to{
-        transform:translateY(40px) translateX(20px);
-      }
-    }
-
-    /* Header */
-    header{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:rgba(15,23,42,.7);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--border);
-    }
-
-    .header-inner{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 0;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:900;
-      font-size:1.4rem;
-    }
-
-    .logo img{
-      width:55px;
-      border-radius:14px;
-    }
-
-    .header-badges{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .badge{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.1);
-      padding:8px 14px;
-      border-radius:40px;
-      font-size:.85rem;
-      display:flex;
-      align-items:center;
-      gap:8px;
-      animation:pulse 2s infinite;
-    }
-
-    @keyframes pulse{
-      50%{
-        transform:scale(1.03);
-      }
-    }
-
-    /* Hero */
-    .hero{
-      padding:60px 0;
-      position:relative;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      align-items:center;
-    }
-
-    .hero-content h1{
-      font-size:3rem;
-      line-height:1.3;
-      margin-bottom:20px;
-      font-weight:900;
-    }
-
-    .gradient-text{
-      background:linear-gradient(90deg,#fff,var(--gold));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-
-    .hero-content p{
-      color:#cbd5e1;
-      line-height:2;
-      margin-bottom:25px;
-      font-size:1.05rem;
-    }
-
-    .stars{
-      color:var(--gold);
-      margin-bottom:15px;
-      font-size:1rem;
-    }
-
-    .live-view{
-      background:rgba(239,68,68,.1);
-      border:1px solid rgba(239,68,68,.3);
-      color:#fff;
-      padding:14px 18px;
-      border-radius:18px;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom:25px;
-      font-weight:700;
-    }
-
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:#ef4444;
-      animation:blink 1s infinite;
-    }
-
-    @keyframes blink{
-      50%{
-        opacity:.2;
-      }
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:20px;
-    }
-
-    .btn{
-      position:relative;
-      overflow:hidden;
-      padding:16px 28px;
-      border:none;
-      border-radius:16px;
-      cursor:pointer;
-      font-weight:800;
-      font-size:1rem;
-      transition:.35s;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--primary),#ec4899);
-      color:#fff;
-      box-shadow:0 0 30px rgba(124,58,237,.5);
-      animation:pulseGlow 2s infinite;
-    }
-
-    @keyframes pulseGlow{
-      50%{
-        box-shadow:0 0 50px rgba(236,72,153,.7);
-      }
-    }
-
-    .btn:hover{
-      transform:translateY(-4px);
-    }
-
-    .btn::after{
-      content:'';
-      position:absolute;
-      top:0;
-      left:-100%;
-      width:100%;
-      height:100%;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
-      transition:.6s;
-    }
-
-    .btn:hover::after{
-      left:100%;
-    }
-
-    .hero-image{
-      position:relative;
-    }
-
-    .hero-image img{
-      border-radius:30px;
-      box-shadow:0 20px 60px rgba(0,0,0,.5);
-    }
-
-    .floating-card{
-      position:absolute;
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.1);
-      backdrop-filter:blur(18px);
-      padding:16px;
-      border-radius:20px;
-      animation:floatCard 3s infinite alternate;
-    }
-
-    @keyframes floatCard{
-      to{
-        transform:translateY(-10px);
-      }
-    }
-
-    .card1{
-      top:20px;
-      left:-20px;
-    }
-
-    .card2{
-      bottom:20px;
-      right:-20px;
-    }
-
-    /* Features Strip */
-    .features-strip{
-      margin:40px 0;
-    }
-
-    .strip{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .strip-item{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:22px;
-      padding:22px;
-      text-align:center;
-      transition:.4s;
-    }
-
-    .strip-item:hover{
-      transform:translateY(-6px);
-      background:rgba(124,58,237,.18);
-    }
-
-    .strip-item i{
-      font-size:2rem;
-      margin-bottom:12px;
-      color:var(--gold);
-    }
-
-    section{
-      padding:70px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:45px;
-    }
-
-    .section-title h2{
-      font-size:2.4rem;
-      margin-bottom:15px;
-    }
-
-    .section-title p{
-      color:#94a3b8;
-      max-width:700px;
-      margin:auto;
-      line-height:2;
-    }
-
-    /* Gallery */
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .gallery-item{
-      overflow:hidden;
-      border-radius:24px;
-      position:relative;
-      cursor:pointer;
-    }
-
-    .gallery-item img{
-      transition:.6s;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .gallery-item:hover img{
-      transform:scale(1.08);
-    }
-
-    .zoom-icon{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(0,0,0,.4);
-      opacity:0;
-      transition:.4s;
-      font-size:2rem;
-    }
-
-    .gallery-item:hover .zoom-icon{
-      opacity:1;
-    }
-
-    /* Specs */
-    .specs{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:25px;
-    }
-
-    .spec-card{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      padding:24px;
-    }
-
-    .spec-item{
-      display:flex;
-      justify-content:space-between;
-      padding:16px 0;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-
-    /* Offer Cards */
-    .offers-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:22px;
-    }
-
-    .offer-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:30px;
-      padding:28px;
-      position:relative;
-      transition:.4s;
-      overflow:hidden;
-    }
-
-    .offer-card:hover{
-      transform:translateY(-8px);
-      border-color:#a855f7;
-    }
-
-    .popular{
-      border:2px solid var(--gold);
-      transform:scale(1.03);
-    }
-
-    .tag{
-      position:absolute;
-      top:16px;
-      left:16px;
-      background:linear-gradient(135deg,#ef4444,#f97316);
-      padding:8px 14px;
-      border-radius:30px;
-      font-size:.8rem;
-      font-weight:700;
-    }
-
-    .price{
-      font-size:2.5rem;
-      font-weight:900;
-      margin:18px 0;
-      color:#fff;
-    }
-
-    .old-price{
-      text-decoration:line-through;
-      color:#94a3b8;
-    }
-
-    .save{
-      color:#10b981;
-      font-weight:800;
-      margin-bottom:18px;
-    }
-
-    /* Reviews */
-    .reviews-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .review{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      padding:26px;
-    }
-
-    .review-top{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      margin-bottom:18px;
-    }
-
-    .review-avatar{
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--primary),#ec4899);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:900;
-      font-size:1.2rem;
-    }
-
-    .review p{
-      line-height:2;
-      color:#cbd5e1;
-    }
-
-    /* FAQ */
-    .faq-item{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      margin-bottom:16px;
-      border-radius:18px;
-      overflow:hidden;
-    }
-
-    .faq-question{
-      padding:20px;
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-weight:800;
-    }
-
-    .faq-answer{
-      max-height:0;
-      overflow:hidden;
-      transition:.4s;
-      padding:0 20px;
-      color:#cbd5e1;
-      line-height:2;
-    }
-
-    .faq-item.active .faq-answer{
-      max-height:200px;
-      padding-bottom:20px;
-    }
-
-    /* Countdown */
-    .countdown{
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-      margin-top:25px;
-    }
-
-    .time-box{
-      width:95px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:20px;
-      padding:18px;
-      text-align:center;
-    }
-
-    .time-box h3{
-      font-size:2rem;
-    }
-
-    /* Order Section */
-    .order-wrapper{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:30px;
-      align-items:start;
-    }
-
-    .form-card,
-    .summary-card{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:30px;
-      padding:30px;
-      position:sticky;
-      top:100px;
-      backdrop-filter:blur(14px);
-    }
-
-    .form-group{
-      margin-bottom:18px;
-    }
-
-    label{
-      display:block;
-      margin-bottom:8px;
-      font-weight:700;
-    }
-
-    input,
-    textarea,
-    select{
-      width:100%;
-      background:#0f172a;
-      border:1px solid rgba(255,255,255,.08);
-      padding:16px;
-      border-radius:16px;
-      color:#fff;
-      font-family:'Cairo',sans-serif;
-      transition:.3s;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus{
-      outline:none;
-      border-color:#a855f7;
-      box-shadow:0 0 0 4px rgba(168,85,247,.15);
-    }
-
-    .summary-row{
-      display:flex;
-      justify-content:space-between;
-      margin-bottom:16px;
-      padding-bottom:12px;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-
-    .total{
-      font-size:1.4rem;
-      font-weight:900;
-      color:var(--gold);
-    }
-
-    .cta-button{
-      width:100%;
-      margin-top:18px;
-      background:linear-gradient(135deg,#7c3aed,#ec4899);
-      color:#fff;
-      border:none;
-      padding:18px;
-      border-radius:18px;
-      font-size:1.1rem;
-      font-weight:900;
-      cursor:pointer;
-      position:relative;
-      overflow:hidden;
-      animation:pulseGlow 2s infinite;
-    }
-
-    .cta-button:disabled{
-      opacity:.7;
-      cursor:not-allowed;
-    }
-
-    .spinner{
-      width:22px;
-      height:22px;
-      border:3px solid rgba(255,255,255,.3);
-      border-top:3px solid #fff;
-      border-radius:50%;
-      animation:spin .7s linear infinite;
-      display:inline-block;
-      vertical-align:middle;
-      margin-right:8px;
-    }
-
-    /* Floating CTA */
-    .floating-cta{
-      position:fixed;
-      bottom:20px;
-      left:20px;
-      z-index:999;
-    }
-
-    .floating-cta a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      background:linear-gradient(135deg,var(--primary),#ec4899);
-      padding:16px 24px;
-      border-radius:60px;
-      box-shadow:0 0 30px rgba(124,58,237,.5);
-      animation:pulseGlow 2s infinite;
-      font-weight:900;
-    }
-
-    /* Footer */
-    footer{
-      padding:60px 0 30px;
-      border-top:1px solid rgba(255,255,255,.08);
-      margin-top:50px;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:30px;
-    }
-
-    .footer-box h4{
-      margin-bottom:18px;
-      font-size:1.2rem;
-    }
-
-    .footer-box p,
-    .footer-box li{
-      color:#94a3b8;
-      line-height:2;
-      list-style:none;
-    }
-
-    .copyright{
-      text-align:center;
-      margin-top:35px;
-      color:#64748b;
-    }
-
-    /* Back Top */
-    #backTop{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:52px;
-      height:52px;
-      border:none;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--primary),#ec4899);
-      color:#fff;
-      cursor:pointer;
-      display:none;
-      z-index:999;
-      box-shadow:0 0 30px rgba(124,58,237,.5);
-    }
-
-    /* Reveal */
-    .reveal{
-      opacity:0;
-      transform:translateY(40px);
-      transition:1s;
-    }
-
-    .reveal.active{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    /* Responsive */
-    @media(max-width:992px){
-
-      .hero-grid,
-      .order-wrapper,
-      .specs{
-        grid-template-columns:1fr;
-      }
-
-      .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .offers-grid,
-      .reviews-grid,
-      .footer-grid,
-      .strip{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .hero-content h1{
-        font-size:2.2rem;
-      }
-    }
-
-    @media(max-width:640px){
-
-      .offers-grid,
-      .reviews-grid,
-      .footer-grid,
-      .strip,
-      .gallery-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-content h1{
-        font-size:1.8rem;
-      }
-
-      .section-title h2{
-        font-size:1.8rem;
-      }
-
-      .header-inner{
-        flex-direction:column;
-        gap:15px;
-      }
-
-      .floating-card{
-        display:none;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>خزانة لتنظيم الأحذية 9 أرفف | رتّبها Ratbha</title>
+
+<meta name="description" content="اطلب الآن خزانة تنظيم الأحذية المكونة من 9 أرفف من رتّبها Ratbha - تصميم عملي فاخر يوفر المساحة ويحافظ على الأحذية مرتبة ونظيفة مع شحن مجاني ودفع عند الاستلام داخل السعودية."/>
+<meta name="keywords" content="خزانة أحذية, منظم أحذية, خزانة تنظيم الأحذية, رفوف أحذية, خزانة 9 أرفف, منظم المنزل, ترتيب الأحذية, متجر سعودي, الدفع عند الاستلام"/>
+<meta name="author" content="Ratbha Store"/>
+
+<meta property="og:title" content="خزانة لتنظيم الأحذية 9 أرفف | رتّبها Ratbha"/>
+<meta property="og:description" content="تصميم فاخر وعصري لتنظيم الأحذية مع شحن مجاني والدفع عند الاستلام داخل السعودية."/>
+<meta property="og:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp"/>
+<meta property="og:type" content="website"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="خزانة لتنظيم الأحذية 9 أرفف"/>
+<meta name="twitter:description" content="وفر المساحة ورتب أحذيتك بأناقة مع خزانة الأحذية المميزة من رتّبها."/>
+<meta name="twitter:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp"/>
+
+<link rel="icon" href="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Product",
+"name":"خزانة لتنظيم الأحذية مكونة من 9 أرفف",
+"image":[
+"https://i.ibb.co/wrJBNkg4/image-5.webp",
+"https://i.ibb.co/RqP3G3d/image-7.webp"
+],
+"description":"خزانة أحذية عملية وعصرية مكونة من 9 أرفف بخامة قماش عالية الجودة وهيكل معدني متين.",
+"brand":{
+"@type":"Brand",
+"name":"Ratbha"
+},
+"offers":{
+"@type":"Offer",
+"priceCurrency":"SAR",
+"price":"133",
+"availability":"https://schema.org/InStock"
+}
+}
+</script>
+
+<style>
+
+:root{
+--primary:#d4af37;
+--secondary:#111827;
+--dark:#0b1020;
+--light:#f8fafc;
+--glass:rgba(255,255,255,.08);
+--white:#fff;
+--success:#22c55e;
+--danger:#ef4444;
+--gradient:linear-gradient(135deg,#d4af37,#f5d76e);
+--shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Cairo',sans-serif;
+background:#060b16;
+color:#fff;
+overflow-x:hidden;
+line-height:1.8;
+}
+
+body::-webkit-scrollbar{
+width:10px;
+}
+
+body::-webkit-scrollbar-track{
+background:#111;
+}
+
+body::-webkit-scrollbar-thumb{
+background:var(--gradient);
+border-radius:20px;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1200px,92%);
+margin:auto;
+}
+
+.progress-bar{
+position:fixed;
+top:0;
+right:0;
+width:0%;
+height:4px;
+background:var(--gradient);
+z-index:999999;
+}
+
+.loader-wrapper{
+position:fixed;
+inset:0;
+background:#050816;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999999;
+transition:.5s;
+}
+
+.loader{
+width:90px;
+height:90px;
+border-radius:50%;
+border:5px solid rgba(255,255,255,.1);
+border-top-color:#d4af37;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+header{
+position:sticky;
+top:0;
+z-index:9999;
+backdrop-filter:blur(20px);
+background:rgba(5,8,20,.85);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:1.4rem;
+font-weight:800;
+}
+
+.logo img{
+width:58px;
+height:58px;
+object-fit:contain;
+border-radius:50%;
+background:#fff;
+padding:5px;
+}
+
+.nav-badges{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.badge{
+padding:8px 14px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.1);
+border-radius:50px;
+font-size:.9rem;
+display:flex;
+align-items:center;
+gap:8px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+50%{transform:translateY(-4px)}
+}
+
+.hero{
+position:relative;
+padding:80px 0 40px;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#d4af3730,transparent 70%);
+top:-150px;
+right:-100px;
+filter:blur(30px);
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero-content h1{
+font-size:3.2rem;
+line-height:1.3;
+margin-bottom:20px;
+font-weight:900;
+}
+
+.hero-content p{
+font-size:1.1rem;
+color:#d1d5db;
+margin-bottom:24px;
+}
+
+.hero-features{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:30px 0;
+}
+
+.feature-box{
+background:var(--glass);
+padding:16px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+display:flex;
+align-items:center;
+gap:12px;
+transition:.4s;
+backdrop-filter:blur(10px);
+}
+
+.feature-box:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.feature-box i{
+color:#d4af37;
+font-size:1.3rem;
+}
+
+.hero-price{
+display:flex;
+align-items:center;
+gap:18px;
+margin:20px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#9ca3af;
+font-size:1.3rem;
+}
+
+.new-price{
+font-size:2.3rem;
+font-weight:900;
+color:#fff;
+}
+
+.discount-badge{
+background:var(--gradient);
+color:#000;
+padding:10px 18px;
+border-radius:50px;
+font-weight:800;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(212,175,55,.7)}
+70%{box-shadow:0 0 0 18px rgba(212,175,55,0)}
+100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}
+}
+
+.cta-btn{
+position:relative;
+overflow:hidden;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:18px 35px;
+border:none;
+background:var(--gradient);
+color:#000;
+font-size:1.15rem;
+font-weight:900;
+border-radius:18px;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 15px 40px rgba(212,175,55,.35);
+}
+
+.cta-btn:hover{
+transform:translateY(-5px) scale(1.02);
+}
+
+.cta-btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
+transition:.7s;
+}
+
+.cta-btn:hover::before{
+left:120%;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+border-radius:35px;
+box-shadow:var(--shadow);
+}
+
+.floating-card{
+position:absolute;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+padding:15px 20px;
+border-radius:20px;
+animation:float 4s infinite;
+}
+
+.card1{
+top:20px;
+left:-20px;
+}
+
+.card2{
+bottom:20px;
+right:-20px;
+}
+
+.quick-bar{
+padding:20px 0;
+}
+
+.quick-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.quick-item{
+background:#0f172a;
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.quick-item:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.quick-item i{
+font-size:2rem;
+margin-bottom:10px;
+color:#d4af37;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.6rem;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#9ca3af;
+max-width:700px;
+margin:auto;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-item{
+overflow:hidden;
+border-radius:25px;
+position:relative;
+cursor:pointer;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.gallery-item img{
+height:100%;
+width:100%;
+object-fit:cover;
+transition:1s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+.gallery-item::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(transparent,rgba(0,0,0,.5));
+}
+
+.specs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.spec-card{
+background:#0f172a;
+padding:25px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.spec-card:hover{
+transform:translateY(-6px);
+border-color:#d4af37;
+}
+
+.spec-card i{
+font-size:2rem;
+margin-bottom:15px;
+color:#d4af37;
+}
+
+.offer-box{
+background:linear-gradient(145deg,#111827,#0f172a);
+padding:30px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+position:relative;
+overflow:hidden;
+transition:.4s;
+}
+
+.offer-box:hover{
+transform:translateY(-7px);
+}
+
+.offer-box.best{
+border:2px solid #d4af37;
+}
+
+.offer-tag{
+position:absolute;
+top:15px;
+left:15px;
+background:var(--gradient);
+color:#000;
+padding:8px 14px;
+font-weight:800;
+border-radius:50px;
+font-size:.9rem;
+}
+
+.offer-price{
+font-size:2rem;
+font-weight:900;
+margin:15px 0;
+}
+
+.offer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.review{
+background:#0f172a;
+padding:25px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.stars{
+color:#facc15;
+margin-bottom:12px;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:#0f172a;
+border-radius:20px;
+margin-bottom:15px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.faq-question{
+padding:20px;
+cursor:pointer;
+font-weight:700;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.5s;
+padding:0 20px;
+color:#d1d5db;
+}
+
+.faq-item.active .faq-answer{
+max-height:300px;
+padding:0 20px 20px;
+}
+
+.order-wrapper{
+display:grid;
+grid-template-columns:1fr 380px;
+gap:30px;
+align-items:start;
+}
+
+.order-form{
+background:#0f172a;
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+position:relative;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:8px;
+font-weight:700;
+}
+
+.form-control{
+width:100%;
+padding:16px;
+border-radius:16px;
+background:#111827;
+border:1px solid rgba(255,255,255,.08);
+color:#fff;
+font-family:'Cairo';
+outline:none;
+transition:.3s;
+}
+
+.form-control:focus{
+border-color:#d4af37;
+box-shadow:0 0 0 4px rgba(212,175,55,.15);
+}
+
+.summary-box{
+position:sticky;
+top:100px;
+background:linear-gradient(145deg,#111827,#0b1020);
+padding:30px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.summary-item{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+padding-bottom:15px;
+border-bottom:1px dashed rgba(255,255,255,.08);
+}
+
+.submit-btn{
+width:100%;
+margin-top:15px;
+padding:20px;
+border:none;
+border-radius:18px;
+font-size:1.2rem;
+font-weight:900;
+background:var(--gradient);
+cursor:pointer;
+transition:.4s;
+position:relative;
+overflow:hidden;
+animation:pulse 2s infinite;
+}
+
+.submit-btn:hover{
+transform:translateY(-4px);
+}
+
+.counter-strip{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.counter-box{
+background:rgba(255,255,255,.08);
+padding:15px 20px;
+border-radius:20px;
+min-width:120px;
+text-align:center;
+}
+
+.count{
+font-size:2rem;
+font-weight:900;
+color:#d4af37;
+}
+
+.footer{
+padding:60px 0 30px;
+background:#050816;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.footer h3{
+margin-bottom:15px;
+}
+
+.footer p,
+.footer li{
+color:#cbd5e1;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer li{
+margin-bottom:10px;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#94a3b8;
+}
+
+.back-top{
+position:fixed;
+bottom:90px;
+left:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:var(--gradient);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#000;
+font-size:1.3rem;
+cursor:pointer;
+opacity:0;
+visibility:hidden;
+transition:.4s;
+z-index:999;
+}
+
+.back-top.show{
+opacity:1;
+visibility:visible;
+}
+
+.floating-cta{
+position:fixed;
+bottom:15px;
+right:15px;
+left:15px;
+z-index:999;
+display:none;
+}
+
+.floating-cta button{
+width:100%;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.timer{
+display:flex;
+gap:10px;
+margin:25px 0;
+flex-wrap:wrap;
+}
+
+.timer-box{
+background:rgba(255,255,255,.08);
+padding:15px;
+border-radius:20px;
+min-width:85px;
+text-align:center;
+}
+
+.timer-box span{
+display:block;
+font-size:2rem;
+font-weight:900;
+color:#d4af37;
+}
+
+@media(max-width:991px){
+
+.hero-grid,
+.order-wrapper{
+grid-template-columns:1fr;
+}
+
+.hero-content{
+order:2;
+}
+
+.quick-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h1{
+font-size:2.2rem;
+}
+
+.floating-cta{
+display:block;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+padding-top:40px;
+}
+
+.hero-content h1{
+font-size:1.8rem;
+}
+
+.quick-grid{
+grid-template-columns:1fr;
+}
+
+.hero-features{
+grid-template-columns:1fr;
+}
+
+.section-title h2{
+font-size:2rem;
+}
+
+.order-form,
+.summary-box{
+padding:22px;
+}
+
+}
+
+</style>
 </head>
 
-<body>
+<body oncontextmenu="return false">
 
-<div id="loader">
-  <div class="loader-circle"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="loader-wrapper" id="loaderWrapper">
+<div class="loader"></div>
 </div>
 
-<div id="progressBar"></div>
-
-<div class="bg-shape shape1"></div>
-<div class="bg-shape shape2"></div>
-
 <header>
-  <div class="container header-inner">
+<div class="container navbar">
 
-    <div class="logo">
-      <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Ratbha Logo" loading="lazy">
-      <span>رتّبها | Ratbha</span>
-    </div>
+<div class="logo">
+<img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Ratbha Logo">
+<div>
+رتّبها <br>
+<span style="font-size:.9rem;color:#d4af37">Ratbha</span>
+</div>
+</div>
 
-    <div class="header-badges">
-      <div class="badge">
-        <i class="fa-solid fa-truck-fast"></i>
-        شحن مجاني
-      </div>
+<div class="nav-badges">
+<div class="badge"><i class="fa-solid fa-truck-fast"></i> شحن مجاني</div>
+<div class="badge"><i class="fa-solid fa-shield-heart"></i> ضمان 6 شهور</div>
+<div class="badge"><i class="fa-solid fa-money-bill-wave"></i> الدفع عند الاستلام</div>
+</div>
 
-      <div class="badge">
-        <i class="fa-solid fa-money-bill-wave"></i>
-        الدفع عند الاستلام
-      </div>
-
-      <div class="badge">
-        <i class="fa-solid fa-shield-heart"></i>
-        ضمان 6 شهور
-      </div>
-    </div>
-
-  </div>
+</div>
 </header>
 
 <section class="hero">
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div class="hero-content reveal">
+<div class="hero-content reveal">
 
-      <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        +4.9 تقييم ممتاز
-      </div>
-
-      <h1>
-        ودّع الفوضى مع <span class="gradient-text">خزانة تنظيم الأحذية</span> المكونة من 9 أرفف
-      </h1>
-
-      <p>
-        الحل الذكي والأنيق لتنظيم الأحذية داخل منزلك بسهولة، تصميم عملي فاخر يوفر المساحة ويحافظ على الأحذية مرتبة ونظيفة طوال الوقت.
-      </p>
-
-      <div class="live-view">
-        <span class="dot"></span>
-        يوجد الآن <strong id="viewers">18</strong> شخص يشاهدون المنتج
-      </div>
-
-      <div class="hero-actions">
-        <a href="#order" class="btn btn-primary">
-          اطلب الآن قبل نفاد الكمية
-        </a>
-      </div>
-
-      <div class="countdown">
-        <div class="time-box">
-          <h3 id="hours">12</h3>
-          <span>ساعة</span>
-        </div>
-
-        <div class="time-box">
-          <h3 id="minutes">45</h3>
-          <span>دقيقة</span>
-        </div>
-
-        <div class="time-box">
-          <h3 id="seconds">22</h3>
-          <span>ثانية</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="hero-image reveal">
-
-      <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="خزانة تنظيم الأحذية" loading="eager">
-
-      <div class="floating-card card1">
-        🔥 الأكثر مبيعاً هذا الأسبوع
-      </div>
-
-      <div class="floating-card card2">
-        ⚠️ الكمية محدودة
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<div class="features-strip">
-  <div class="container strip">
-
-    <div class="strip-item reveal">
-      <i class="fa-solid fa-box-open"></i>
-      <h3>9 أرفف عملية</h3>
-    </div>
-
-    <div class="strip-item reveal">
-      <i class="fa-solid fa-layer-group"></i>
-      <h3>توفر مساحة كبيرة</h3>
-    </div>
-
-    <div class="strip-item reveal">
-      <i class="fa-solid fa-screwdriver-wrench"></i>
-      <h3>تركيب سهل وسريع</h3>
-    </div>
-
-    <div class="strip-item reveal">
-      <i class="fa-solid fa-shield"></i>
-      <h3>جودة عالية ومتانة</h3>
-    </div>
-
-  </div>
+<div class="discount-badge">
+🔥 خصم اليوم لفترة محدودة
 </div>
 
-<section>
-  <div class="container">
+<h1>
+خزانة تنظيم الأحذية الذكية<br>
+9 أرفف توفر لك المساحة والأناقة
+</h1>
 
-    <div class="section-title reveal">
-      <h2>معرض المنتج</h2>
-      <p>
-        تصميم عملي عصري يناسب جميع المنازل ويوفر لك ترتيباً مثالياً للأحذية بدون فوضى.
-      </p>
-    </div>
+<p>
+رتّب منزلك بطريقة احترافية واحمِ أحذيتك من الغبار والفوضى مع تصميم عصري فاخر يناسب جميع المساحات ويمنحك مظهراً أنيقاً ومنظماً.
+</p>
 
-    <div class="gallery-grid">
+<div class="hero-price">
+<div class="old-price">199 ريال</div>
+<div class="new-price">133 ريال</div>
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="timer">
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/RqP3G3d/image-7.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="timer-box">
+<span id="hours">12</span>
+ساعة
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="timer-box">
+<span id="minutes">45</span>
+دقيقة
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="timer-box">
+<span id="seconds">10</span>
+ثانية
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/bMz32c9T/image-2.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="hero-features">
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/rfs3sQss/image-3.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="feature-box">
+<i class="fa-solid fa-layer-group"></i>
+<div>9 أرفف واسعة</div>
+</div>
 
-      <div class="gallery-item reveal">
-        <img src="https://i.ibb.co/DHTrwQYK/image-8.webp" loading="lazy" alt="">
-        <div class="zoom-icon">
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-        </div>
-      </div>
+<div class="feature-box">
+<i class="fa-solid fa-shirt"></i>
+<div>قماش قابل للغسيل</div>
+</div>
 
-    </div>
+<div class="feature-box">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<div>تركيب سهل وسريع</div>
+</div>
 
-  </div>
+<div class="feature-box">
+<i class="fa-solid fa-house"></i>
+<div>توفر المساحة</div>
+</div>
+
+</div>
+
+<a href="#order">
+<button class="cta-btn">
+<i class="fa-solid fa-cart-shopping"></i>
+اطلب الآن قبل نفاد الكمية
+</button>
+</a>
+
+<div class="counter-strip">
+
+<div class="counter-box">
+<div class="count" data-target="1847">0</div>
+طلب ناجح
+</div>
+
+<div class="counter-box">
+<div class="count" data-target="29">0</div>
+قطعة متبقية
+</div>
+
+<div class="counter-box">
+<div class="count" data-target="17">0</div>
+يشاهدون الآن
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image reveal">
+<img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="خزانة تنظيم الأحذية">
+
+<div class="floating-card card1">
+⭐ تقييم العملاء 4.9/5
+</div>
+
+<div class="floating-card card2">
+🚚 شحن مجاني لكل السعودية
+</div>
+
+</div>
+
+</div>
 </section>
 
-<section>
-  <div class="container">
+<section class="quick-bar">
+<div class="container quick-grid">
 
-    <div class="section-title reveal">
-      <h2>مواصفات المنتج</h2>
-    </div>
+<div class="quick-item reveal">
+<i class="fa-solid fa-box-open"></i>
+<h3>ترتيب مثالي</h3>
+<p>احفظ أحذيتك بشكل مرتب وأنيق</p>
+</div>
 
-    <div class="specs">
+<div class="quick-item reveal">
+<i class="fa-solid fa-crown"></i>
+<h3>جودة عالية</h3>
+<p>خامات قوية وعمر استخدام طويل</p>
+</div>
 
-      <div class="spec-card reveal">
+<div class="quick-item reveal">
+<i class="fa-solid fa-credit-card"></i>
+<h3>الدفع عند الاستلام</h3>
+<p>اطلب الآن وادفع عند الاستلام</p>
+</div>
 
-        <div class="spec-item">
-          <strong>الماركة</strong>
-          <span>Generic</span>
-        </div>
+<div class="quick-item reveal">
+<i class="fa-solid fa-truck"></i>
+<h3>شحن سريع</h3>
+<p>توصيل سريع لجميع مناطق المملكة</p>
+</div>
 
-        <div class="spec-item">
-          <strong>الخامة</strong>
-          <span>معدن + قماش</span>
-        </div>
-
-        <div class="spec-item">
-          <strong>عدد الأرفف</strong>
-          <span>9 أرفف</span>
-        </div>
-
-        <div class="spec-item">
-          <strong>المقاس</strong>
-          <span>60 × 30 × 158 سم</span>
-        </div>
-
-      </div>
-
-      <div class="spec-card reveal">
-
-        <div class="spec-item">
-          <strong>الضمان</strong>
-          <span>6 شهور</span>
-        </div>
-
-        <div class="spec-item">
-          <strong>بلد الصنع</strong>
-          <span>الصين</span>
-        </div>
-
-        <div class="spec-item">
-          <strong>اللون</strong>
-          <span>عشوائي</span>
-        </div>
-
-        <div class="spec-item">
-          <strong>طريقة التركيب</strong>
-          <span>سهلة مع كتيب تعليمات</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section>
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <div class="section-title reveal">
-      <h2>العروض الحصرية اليوم</h2>
-      <p>استفد من الخصومات القوية قبل انتهاء الكمية المحدودة.</p>
-    </div>
+<div class="section-title reveal">
+<h2>معرض المنتج</h2>
+<p>تصميم عملي فاخر يمنح منزلك ترتيباً وأناقة استثنائية</p>
+</div>
 
-    <div class="offers-grid">
+<div class="gallery">
 
-      <div class="offer-card reveal">
-        <div class="tag">الأكثر طلباً</div>
-        <h3>قطعة واحدة</h3>
-        <div class="price">133 ر.س</div>
-        <div class="save">شحن مجاني</div>
-      </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="">
+</div>
 
-      <div class="offer-card popular reveal">
-        <div class="tag">وفر أكثر</div>
-        <h3>قطعتين</h3>
-        <div class="price">184 ر.س</div>
-        <div class="old-price">266 ر.س</div>
-        <div class="save">وفر 82 ريال</div>
-      </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="">
+</div>
 
-      <div class="offer-card reveal">
-        <div class="tag">عرض قوي</div>
-        <h3>3 قطع</h3>
-        <div class="price">229 ر.س</div>
-        <div class="old-price">399 ر.س</div>
-        <div class="save">وفر 170 ريال</div>
-      </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="">
+</div>
 
-      <div class="offer-card reveal">
-        <div class="tag">تاجر ذكي</div>
-        <h3>4 قطع</h3>
-        <div class="price">308 ر.س</div>
-        <div class="old-price">532 ر.س</div>
-        <div class="save">وفر 224 ريال</div>
-      </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="">
+</div>
 
-    </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="">
+</div>
 
-  </div>
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="">
+</div>
+
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/rfs3sQss/image-3.webp" alt="">
+</div>
+
+<div class="gallery-item reveal">
+<img loading="lazy" src="https://i.ibb.co/DHTrwQYK/image-8.webp" alt="">
+</div>
+
+</div>
+
+</div>
 </section>
 
-<section>
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <div class="section-title reveal">
-      <h2>آراء العملاء</h2>
-    </div>
+<div class="section-title reveal">
+<h2>لماذا يختار العملاء منتجنا؟</h2>
+</div>
 
-    <div class="reviews-grid">
+<div class="specs">
 
-      <div class="review reveal">
-        <div class="review-top">
-          <div class="review-avatar">س</div>
-          <div>
-            <h4>سارة</h4>
-            <div class="stars">
-              ★★★★★
-            </div>
-          </div>
-        </div>
+<div class="spec-card reveal">
+<i class="fa-solid fa-shoe-prints"></i>
+<h3>سعة كبيرة</h3>
+<p>9 أرفف تسع عدداً كبيراً من الأحذية لجميع أفراد الأسرة.</p>
+</div>
 
-        <p>
-          ممتازة جداً وسهلة التركيب، رتبت كل الأحذية وأصبح المكان مرتب بشكل جميل.
-        </p>
-      </div>
+<div class="spec-card reveal">
+<i class="fa-solid fa-feather"></i>
+<h3>خفيفة وسهلة النقل</h3>
+<p>يمكن نقلها وتركيبها بسهولة دون أي مجهود.</p>
+</div>
 
-      <div class="review reveal">
-        <div class="review-top">
-          <div class="review-avatar">م</div>
-          <div>
-            <h4>محمد</h4>
-            <div class="stars">
-              ★★★★★
-            </div>
-          </div>
-        </div>
+<div class="spec-card reveal">
+<i class="fa-solid fa-droplet"></i>
+<h3>قابلة للغسيل</h3>
+<p>خامة قماش عالية الجودة سهلة التنظيف وتحافظ على المظهر الأنيق.</p>
+</div>
 
-        <p>
-          الجودة ممتازة مقارنة بالسعر والشحن كان سريع والدفع عند الاستلام ميزة رائعة.
-        </p>
-      </div>
+<div class="spec-card reveal">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>تصميم متين</h3>
+<p>هيكل معدني ثابت يتحمل الاستخدام اليومي لفترات طويلة.</p>
+</div>
 
-      <div class="review reveal">
-        <div class="review-top">
-          <div class="review-avatar">ن</div>
-          <div>
-            <h4>نورة</h4>
-            <div class="stars">
-              ★★★★★
-            </div>
-          </div>
-        </div>
+</div>
 
-        <p>
-          أخذت عرض الثلاث قطع ووصلت بحالة ممتازة، فعلاً وفرت مساحة كبيرة داخل المنزل.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section id="order">
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <div class="section-title reveal">
-      <h2>أكمل طلبك الآن</h2>
-      <p>
-        الكمية المتبقية قليلة بسبب الإقبال الكبير، اطلب الآن قبل انتهاء العرض.
-      </p>
-    </div>
+<div class="section-title reveal">
+<h2>العروض الحصرية</h2>
+<p>استفد من الخصومات القوية قبل انتهاء الكمية المحدودة</p>
+</div>
 
-    <div class="order-wrapper">
+<div class="offer-grid">
 
-      <div class="form-card reveal">
+<div class="offer-box reveal">
+<div class="offer-tag">عرض فردي</div>
+<h3>قطعة واحدة</h3>
+<div class="offer-price">133 ريال</div>
+<p>شحن مجاني + الدفع عند الاستلام</p>
+</div>
 
-        <form id="orderForm">
+<div class="offer-box best reveal">
+<div class="offer-tag">الأكثر مبيعاً</div>
+<h3>قطعتين</h3>
+<div class="offer-price">184 ريال</div>
+<p>وفر 82 ريال واحصل على أفضل قيمة</p>
+</div>
 
-          <div class="form-group">
-            <label>الاسم الكامل</label>
-            <input type="text" name="name" required>
-          </div>
+<div class="offer-box reveal">
+<div class="offer-tag">توفير ضخم</div>
+<h3>3 قطع</h3>
+<div class="offer-price">229 ريال</div>
+<p>خصم 170 ريال لفترة محدودة</p>
+</div>
 
-          <div class="form-group">
-            <label>رقم الجوال</label>
-            <input type="tel" name="phone" required pattern="05[0-9]{8}">
-          </div>
+</div>
 
-          <div class="form-group">
-            <label>المدينة</label>
-
-            <select name="city" required>
-              <option value="">اختر المدينة</option>
-              <option>الرياض</option>
-              <option>جدة</option>
-              <option>مكة</option>
-              <option>المدينة المنورة</option>
-              <option>الدمام</option>
-              <option>الطائف</option>
-              <option>تبوك</option>
-              <option>أبها</option>
-              <option>خميس مشيط</option>
-              <option>جازان</option>
-              <option>نجران</option>
-              <option>حائل</option>
-              <option>بريدة</option>
-              <option>الخبر</option>
-              <option>الجبيل</option>
-              <option>ينبع</option>
-              <option>الأحساء</option>
-              <option>عرعر</option>
-              <option>سكاكا</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>العنوان بالتفصيل</label>
-            <textarea name="address" rows="4" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label>اختر العرض</label>
-
-            <select name="offer" id="offerSelect" required>
-              <option value="1" data-price="133" data-discount="0">قطعة واحدة - 133 ريال</option>
-              <option value="2" data-price="184" data-discount="82">قطعتين - 184 ريال</option>
-              <option value="3" data-price="229" data-discount="170">3 قطع - 229 ريال</option>
-              <option value="4" data-price="308" data-discount="224">4 قطع - 308 ريال</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>ملاحظات</label>
-            <textarea name="notes" rows="3"></textarea>
-          </div>
-
-          <button type="submit" class="cta-button" id="submitBtn">
-            <i class="fa-solid fa-lock"></i>
-            تأكيد الطلب الآن
-          </button>
-
-        </form>
-
-      </div>
-
-      <div class="summary-card reveal">
-
-        <h3 style="margin-bottom:25px;">ملخص الطلب</h3>
-
-        <div class="summary-row">
-          <span>عدد القطع</span>
-          <strong id="summaryQty">1</strong>
-        </div>
-
-        <div class="summary-row">
-          <span>السعر</span>
-          <strong id="summaryPrice">133 ر.س</strong>
-        </div>
-
-        <div class="summary-row">
-          <span>الخصم</span>
-          <strong id="summaryDiscount">0 ر.س</strong>
-        </div>
-
-        <div class="summary-row">
-          <span>الشحن</span>
-          <strong style="color:#10b981;">مجاني</strong>
-        </div>
-
-        <div class="summary-row total">
-          <span>الإجمالي</span>
-          <strong id="summaryTotal">133 ر.س</strong>
-        </div>
-
-        <div style="margin-top:25px; line-height:2; color:#cbd5e1;">
-          ✅ الدفع عند الاستلام<br>
-          ✅ شحن مجاني لجميع مناطق السعودية<br>
-          ✅ ضمان 6 شهور ضد عيوب الصناعة
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section>
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <div class="section-title reveal">
-      <h2>الأسئلة الشائعة</h2>
-    </div>
+<div class="section-title reveal">
+<h2>آراء العملاء</h2>
+</div>
 
-    <div class="faq-item reveal">
-      <div class="faq-question">
-        هل التركيب صعب؟
-        <i class="fa-solid fa-plus"></i>
-      </div>
+<div class="reviews">
 
-      <div class="faq-answer">
-        لا، التركيب سهل جداً ويأتي مع كتيب تعليمات واضح.
-      </div>
-    </div>
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>
+الخزانة ممتازة جداً وجودتها فوق المتوقع، وفرت مساحة كبيرة في المنزل.
+</p>
+<h4>— نورة، الرياض</h4>
+</div>
 
-    <div class="faq-item reveal">
-      <div class="faq-question">
-        هل يوجد ضمان؟
-        <i class="fa-solid fa-plus"></i>
-      </div>
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>
+التركيب سهل والشكل أنيق جداً، طلبت قطعتين ووصلت بسرعة.
+</p>
+<h4>— خالد، جدة</h4>
+</div>
 
-      <div class="faq-answer">
-        نعم، المنتج يشمل ضمان لمدة 6 شهور ضد عيوب الصناعة.
-      </div>
-    </div>
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>
+أفضل من الصور بصراحة، عملية وخفيفة وتستحق السعر.
+</p>
+<h4>— ريم، الدمام</h4>
+</div>
 
-    <div class="faq-item reveal">
-      <div class="faq-question">
-        كم مدة الشحن؟
-        <i class="fa-solid fa-plus"></i>
-      </div>
+</div>
 
-      <div class="faq-answer">
-        مدة التوصيل من 2 إلى 5 أيام عمل حسب المدينة.
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<footer>
-  <div class="container">
+<section class="section" id="order">
+<div class="container">
 
-    <div class="footer-grid">
+<div class="section-title reveal">
+<h2>أكمل طلبك الآن</h2>
+<p>الكمية محدودة — اطلب الآن قبل انتهاء العرض</p>
+</div>
 
-      <div class="footer-box">
-        <h4>رتّبها Ratbha</h4>
-        <p>
-          متجر سعودي متخصص في الحلول المنزلية الذكية ومنتجات التنظيم العصرية عالية الجودة.
-        </p>
-      </div>
+<div class="order-wrapper">
 
-      <div class="footer-box">
-        <h4>سياسة الاستبدال</h4>
-        <ul>
-          <li>استبدال خلال 7 أيام</li>
-          <li>يجب أن يكون المنتج بحالته الأصلية</li>
-          <li>سهولة وسرعة في الخدمة</li>
-        </ul>
-      </div>
+<div class="order-form reveal">
 
-      <div class="footer-box">
-        <h4>الشحن والدفع</h4>
-        <ul>
-          <li>شحن مجاني</li>
-          <li>الدفع عند الاستلام</li>
-          <li>توصيل سريع لكل المدن</li>
-        </ul>
-      </div>
+<form id="orderForm">
 
-      <div class="footer-box">
-        <h4>وسائل الدفع</h4>
-        <ul>
-          <li>الدفع عند الاستلام</li>
-          <li>تحويل بنكي</li>
-          <li>مدى / فيزا / ماستر</li>
-        </ul>
-      </div>
+<div class="form-group">
+<label>الاسم الكامل</label>
+<input type="text" name="name" class="form-control" required>
+</div>
 
-    </div>
+<div class="form-group">
+<label>رقم الجوال</label>
+<input type="tel" name="phone" class="form-control" pattern="05[0-9]{8}" required>
+</div>
 
-    <div class="copyright">
-      © 2026 جميع الحقوق محفوظة لمتجر رتّبها Ratbha
-    </div>
+<div class="form-group">
+<label>المدينة</label>
+<select name="city" class="form-control" required>
 
-  </div>
+<option value="">اختر المدينة</option>
+<option>الرياض</option>
+<option>جدة</option>
+<option>مكة</option>
+<option>المدينة المنورة</option>
+<option>الدمام</option>
+<option>الخبر</option>
+<option>الطائف</option>
+<option>أبها</option>
+<option>تبوك</option>
+<option>القصيم</option>
+<option>جازان</option>
+<option>حائل</option>
+<option>نجران</option>
+<option>ينبع</option>
+<option>الجبيل</option>
+<option>عرعر</option>
+
+</select>
+</div>
+
+<div class="form-group">
+<label>العنوان</label>
+<input type="text" name="address" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label>اختر العرض</label>
+<select name="offer" class="form-control" id="offerSelect" required>
+
+<option value="133" data-qty="1" data-discount="66">قطعة واحدة — 133 ريال</option>
+
+<option value="184" data-qty="2" data-discount="82">قطعتين — 184 ريال</option>
+
+<option value="229" data-qty="3" data-discount="170">3 قطع — 229 ريال</option>
+
+<option value="308" data-qty="4" data-discount="224">4 قطع — 308 ريال</option>
+
+</select>
+</div>
+
+<div class="form-group">
+<label>ملاحظات إضافية (اختياري)</label>
+<textarea name="notes" class="form-control" rows="4"></textarea>
+</div>
+
+<button type="submit" class="submit-btn" id="submitBtn">
+<span id="btnText">
+<i class="fa-solid fa-check"></i>
+تأكيد الطلب الآن
+</span>
+</button>
+
+</form>
+
+</div>
+
+<div class="summary-box reveal">
+
+<h3 style="margin-bottom:20px">ملخص الطلب</h3>
+
+<div class="summary-item">
+<span>عدد القطع</span>
+<strong id="summaryQty">1</strong>
+</div>
+
+<div class="summary-item">
+<span>السعر</span>
+<strong id="summaryPrice">133 ريال</strong>
+</div>
+
+<div class="summary-item">
+<span>الخصم</span>
+<strong id="summaryDiscount">66 ريال</strong>
+</div>
+
+<div class="summary-item">
+<span>الشحن</span>
+<strong style="color:#22c55e">مجاني</strong>
+</div>
+
+<div class="summary-item">
+<span>الإجمالي النهائي</span>
+<strong style="color:#d4af37" id="summaryTotal">133 ريال</strong>
+</div>
+
+<div style="margin-top:20px">
+<div class="badge" style="justify-content:center">
+🔥 يتبقى 29 قطعة فقط
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title reveal">
+<h2>الأسئلة الشائعة</h2>
+</div>
+
+<div class="faq">
+
+<div class="faq-item reveal">
+<div class="faq-question">
+هل التركيب سهل؟
+<i class="fa-solid fa-plus"></i>
+</div>
+<div class="faq-answer">
+نعم، تأتي الخزانة مع كتيب تعليمات واضح ويمكن تركيبها خلال دقائق.
+</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question">
+هل الشحن مجاني؟
+<i class="fa-solid fa-plus"></i>
+</div>
+<div class="faq-answer">
+نعم، الشحن مجاني لجميع مناطق المملكة العربية السعودية.
+</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question">
+هل يوجد ضمان؟
+<i class="fa-solid fa-plus"></i>
+</div>
+<div class="faq-answer">
+نعم، ضمان لمدة 6 شهور ضد عيوب التصنيع.
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+<h3>رتّبها | Ratbha</h3>
+<p>
+متجر سعودي متخصص في المنتجات المنزلية الذكية والتنظيم العصري بجودة عالية وأسعار منافسة.
+</p>
+</div>
+
+<div>
+<h3>سياسة الاستبدال والاسترجاع</h3>
+<ul>
+<li>استبدال خلال 7 أيام</li>
+<li>المنتج بحالته الأصلية</li>
+<li>ضمان ضد عيوب التصنيع</li>
+</ul>
+</div>
+
+<div>
+<h3>معلومات الشحن</h3>
+<ul>
+<li>شحن مجاني لكل السعودية</li>
+<li>التوصيل خلال 2 - 5 أيام</li>
+<li>الدفع عند الاستلام</li>
+</ul>
+</div>
+
+<div>
+<h3>وسائل الدفع</h3>
+<ul>
+<li>الدفع عند الاستلام</li>
+<li>مدى</li>
+<li>فيزا / ماستركارد</li>
+</ul>
+</div>
+
+</div>
+
+<div class="copy">
+جميع الحقوق محفوظة © رتّبها Ratbha 2026
+</div>
+
 </footer>
 
-<div class="floating-
+<div class="back-top" id="backTop">
+<i class="fa-solid fa-arrow-up"></i>
+</div>
+
+<div class="floating-cta">
+<a href="#order">
+<button class="cta-btn">
+اطلب الآن بخصم اليوم
+</button>
+</a>
+</div>
+
+<script>
+
+window.addEventListener('load',()=>{
+document.getElementById('loaderWrapper').style.opacity='0';
+setTimeout(()=>{
+document.getElementById('loaderWrapper').style.display='none';
+},500);
+});
+
+const reveals=document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll',()=>{
+reveals.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add('active');
+}
+});
+
+const scrollTop=document.documentElement.scrollTop;
+const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+document.getElementById('progressBar').style.width=(scrollTop/height)*100+'%';
+
+const backTop=document.getElementById('backTop');
+
+if(scrollTop>400){
+backTop.classList.add('show');
+}else{
+backTop.classList.remove('
