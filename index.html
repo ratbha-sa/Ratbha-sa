@@ -3,114 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر رتبها - خزانة تنظيم الأحذية</title>
-    <!-- الأوسمة لمحركات البحث (SEO) -->
-    <meta name="description" content="خزانة تنظيم أحذية بـ 9 أرفف، جودة عالية وشحن مجاني في السعودية.">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>خزانة تنظيم الأحذية 9 أرفف | ترتيب وأناقة لمنزلك</title>
+    <meta name="description" content="احصل على خزانة تنظيم الأحذية المكونة من 9 أرفف. تصميم متين، سهل التركيب، ومثالي لتوفير المساحة. اطلب الآن واستفد من الشحن المجاني والعروض الخاصة داخل السعودية.">
+    <meta name="keywords" content="منظم أحذية، خزانة أحذية، ترتيب المنزل، أرفف أحذية، منظم أحذية 9 أدوار، أثاث منزلي">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --primary: #2c3e50; --secondary: #e67e22; --accent: #27ae60; --bg: #f4f7f6; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background: var(--bg); color: #333; }
-        .container { max-width: 600px; margin: 0 auto; background: #fff; }
-        header { padding: 15px; text-align: center; border-bottom: 2px solid var(--secondary); }
-        header img { max-width: 120px; }
-        .hero img { width: 100%; display: block; }
-        .product-info { padding: 20px; text-align: center; }
-        .price { font-size: 28px; color: var(--secondary); font-weight: 900; }
-        .offer-card { border: 2px solid #eee; margin: 10px; padding: 15px; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .offer-card.active { border-color: var(--secondary); background: #fff9f4; }
-        .form-box { padding: 20px; background: #fff; margin-top: 20px; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); }
-        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
-        .btn-submit { background: var(--secondary); color: #fff; width: 100%; padding: 18px; border: none; border-radius: 8px; font-size: 20px; font-weight: 900; cursor: pointer; }
-        .loading { display: none; text-align: center; color: var(--secondary); font-weight: bold; }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e67e22;
+            --accent-color: #27ae60;
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-width: 140px;
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero-banner {
+            width: 100%;
+            display: block;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        /* Product Intro */
+        .product-intro {
+            background: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .price-container {
+            margin: 15px 0;
+        }
+
+        .main-price {
+            font-size: 32px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .shipping-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 15px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* Image Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            border-right: 6px solid var(--secondary-color);
+            padding-right: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .feature-item i {
+            color: var(--accent-color);
+            margin-left: 12px;
+            font-weight: bold;
+        }
+
+        /* Offers Cards */
+        .offers-wrapper {
+            margin: 30px 0;
+        }
+
+        .offer-card {
+            background: var(--white);
+            border: 2px solid #eee;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .offer-card.active {
+            border-color: var(--secondary-color);
+            background: #fffbf5;
+        }
+
+        .offer-card.best-value::after {
+            content: "الأكثر توفيراً";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--secondary-color);
+            color: white;
+            font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .offer-details h4 {
+            font-size: 19px;
+            color: var(--primary-color);
+        }
+
+        .offer-details span {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .savings-tag {
+            background: #ffecec;
+            color: #d63031;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Form Styling */
+        .order-form-box {
+            background: var(--white);
+            padding: 40px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin: 40px 0;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1.5px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+            background: #fdfdfd;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 8px rgba(230, 126, 34, 0.2);
+        }
+
+        .required-star { color: #d63031; }
+
+        .submit-btn {
+            background: var(--secondary-color);
+            color: white;
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Tech Details Table */
+        .specs-table {
+            width: 100%;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .specs-table tr {
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table td {
+            padding: 15px;
+            font-size: 15px;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 700;
+            background: #fafafa;
+            width: 35%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .product-title { font-size: 22px; }
+            .offer-card { flex-direction: column; text-align: center; gap: 10px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Logo">
-</header>
-
-<div class="container">
-    <div class="hero">
-        <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="Banner">
-    </div>
-
-    <div class="product-info">
-        <h1>خزانة تنظيم الأحذية (9 أرفف)</h1>
-        <p class="price">133 ريال - شحن مجاني</p>
-    </div>
-
-    <div id="offers">
-        <div class="offer-card active" onclick="selectOffer(1, 133, this)">
-            <div><b>قطعة واحدة</b></div>
-            <div>133 ريال</div>
+    <header>
+        <div class="container">
+            <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Logo">
         </div>
-        <div class="offer-card" onclick="selectOffer(2, 184, this)">
-            <div><b>قطعتين (خصم 82 ريال)</b></div>
-            <div>184 ريال</div>
-        </div>
-        <div class="offer-card" onclick="selectOffer(3, 229, this)">
-            <div><b>3 قطع (خصم 170 ريال)</b></div>
-            <div>229 ريال</div>
-        </div>
-    </div>
+    </header>
 
-    <div class="form-box">
-        <h3 style="text-align:center">سجل بياناتك للطلب</h3>
-        <form id="orderForm">
-            <input type="text" name="full_name" placeholder="الاسم الكامل" required>
-            <input type="tel" name="phone" placeholder="رقم الجوال" required>
-            <select name="city" required>
-                <option value="">اختر المدينة</option>
-                <option value="الرياض">الرياض</option>
-                <option value="جدة">جدة</option>
-                <option value="مكة">مكة</option>
-                <option value="الدمام">الدمام</option>
-                <option value="أخرى">مدينة أخرى</option>
-            </select>
-            <input type="text" name="address" placeholder="العنوان (الحي/الشارع)" required>
-            <textarea name="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+    <main class="container">
+        
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="Banner المنتج الرئيسي">
+        </div>
+
+        <!-- Product Intro -->
+        <section class="product-intro">
+            <h1 class="product-title">خزانة لتنظيم الاحذية احترافية - مكونة من 9 أرفف</h1>
+            <div class="price-container">
+                <span class="main-price">133 ريال فقط</span>
+            </div>
+            <div class="shipping-badge">شحن مجاني لجميع مناطق المملكة 🚚</div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2 class="section-h2">مميزات المنتج</h2>
+            <div class="feature-item"><i>✔</i> تحافظ على أحذيتك مرتبة ونظيفة في مكان واحد.</div>
+            <div class="feature-item"><i>✔</i> تحتوي على 9 أدوار تسع مجموعة كبيرة جداً من الأحذية.</div>
+            <div class="feature-item"><i>✔</i> تصميم متين وثابت مع قوائم معدنية عالية الجودة.</div>
+            <div class="feature-item"><i>✔</i> سهل التفكيك والتركيب للتنقل بسهولة تامة.</div>
+            <div class="feature-item"><i>✔</i> الجراب مصنوع من قماش فاخر قابل للغسل.</div>
+            <div class="feature-item"><i>✔</i> مزودة بجيوب جانبية لمساحة تخزين إضافية.</div>
+            <div class="feature-item"><i>✔</i> توفر مساحة هائلة في الغرفة وتمنع الفوضى.</div>
+            <div class="feature-item"><i>✔</i> جودة عالية تضمن لك عمر استخدام طويل جداً.</div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-grid">
+            <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="صورة المنتج 1">
+            <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="صورة المنتج 2">
+            <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="صورة المنتج 3">
+            <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="صورة المنتج 4">
+            <img src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="صورة المنتج 5">
+            <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="صورة المنتج 6">
+        </section>
+
+        <!-- Offers -->
+        <section class="offers-wrapper">
+            <h2 class="section-h2">اختر العرض المناسب لك</h2>
             
-            <input type="hidden" id="qty" name="quantity" value="1">
-            <input type="hidden" id="total" name="total_price" value="133">
+            <div class="offer-card" onclick="selectOffer(1, 133, this)">
+                <div class="offer-details">
+                    <h4>قطعة واحدة</h4>
+                    <span>133 ريال</span>
+                </div>
+                <div class="savings-tag">شحن مجاني</div>
+            </div>
 
-            <div id="loadingMsg" class="loading">جاري إرسال طلبك...</div>
-            <button type="submit" id="submitBtn" class="btn-submit">تأكيد الطلب</button>
-        </form>
-    </div>
-</div>
+            <div class="offer-card active" onclick="selectOffer(2, 184, this)">
+                <div class="offer-details">
+                    <h4>قطعتين</h4>
+                    <span>184 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 82 ريال</div>
+            </div>
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwmojSHyHidvGaRqYFy1_4ZZkAd68NCWSgepDAXkuJE1PgNjWGYGHNzJ0Biv7wp2gPRaQ/exec';
-    const form = document.getElementById('orderForm');
+            <div class="offer-card best-value" onclick="selectOffer(3, 229, this)">
+                <div class="offer-details">
+                    <h4>3 قطع</h4>
+                    <span>229 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 170 ريال</div>
+            </div>
 
-    function selectOffer(qty, price, el) {
-        document.querySelectorAll('.offer-card').forEach(c => c.classList.remove('active'));
-        el.classList.add('active');
-        document.getElementById('qty').value = qty;
-        document.getElementById('total').value = price;
-    }
+            <div class="offer-card" onclick="selectOffer(4, 308, this)">
+                <div class="offer-details">
+                    <h4>4 قطع</h4>
+                    <span>308 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 224 ريال</div>
+            </div>
+        </section>
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        document.getElementById('submitBtn').style.display = 'none';
-        document.getElementById('loadingMsg').style.display = 'block';
+        <!-- Checkout Form -->
+        <section id="checkout" class="order-form-box">
+            <h3 class="form-title">سجل بياناتك لإتمام الطلب</h3>
+            <form id="landingForm">
+                <div class="input-group">
+                    <label>الاسم كامل <span class="required-star">*</span></label>
+                    <input type="text" name="full_name" placeholder="أدخل اسمك الثلاثي" required>
+                </div>
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                alert('شكراً لك! تم استلام طلبك بنجاح وسنتصل بك قريباً.');
-                form.reset();
-                document.getElementById('submitBtn').style.display = 'block';
-                document.getElementById('loadingMsg').style.display = 'none';
-            })
-            .catch(error => {
-                alert('عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.');
-                document.getElementById('submitBtn').style.display = 'block';
-                document.getElementById('loadingMsg').style.display = 'none';
-            });
-    });
-</script>
+                <div class="input-group">
+                    <label>رقم الجوال <span class="required-star">*</span></label>
+                    <input type="tel" name="phone" placeholder="05xxxxxxxx" required>
+                </div>
 
+                <div class="input-group">
+                    <label>المدينة <span class="required-star">*</span></label>
+                    <select name="city" required>
+                        <option value="">-- اختر المنطقة --</option>
+                        <option value="الرياض">الرياض</option>
+                        <option value="جدة">جدة</option>
+                        <option value="مكة المكرمة">مكة المكرمة</option>
+                        <option value="المدينة المنورة">المدينة المنورة</option>
+                        <option value="الدمام">الدمام</option>
+                        <option value="الخبر">الخبر</option>
+                        <option value="القصيم">القصيم</option>
+                        <option value="أبها">أبها</option>
+                        <option value="تبوك">تبوك</option>
+                        <option value="حائل">حائل</option>
+                        <option value="جازان">جازان</option>
+                        <option value="نجران">نجران</option>
+                        <option value="الباحة">الباحة</option>
+                        <option value="الجوف">الجوف</option>
+                        <option value="الحدود الشمالية">الحدود الشمالية</option>
+                        <option value="الطائف">الطائف</option>
+                        <option value="القطيف">القطيف</option>
+                        <option value="ينبع">ينبع</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>العنوان <span class="required-star">*</span></label>
+                    <input type="text" name="address" placeholder="اسم الحي / الشارع" required>
+                </div>
+
+                <div class="input-group">
+                    <label>ملاحظات إضافية</label>
+                    <textarea name="notes" rows="3" placeholder="أي تفاصيل أخرى بخصوص التوصيل"></textarea>
+                </div>
+
+                <!-- Hidden values to catch order details -->
+                <input type="hidden" id="qty_field" name="quantity" value="2">
+                <input type="hidden" id="price_field" name="total_price" value="184">
+
+                <button type="submit" id="submitBtn" class="submit-btn">تأكيد الطلب</button>
+            </form>
+        </section>
+
+        <!-- Technical Specs -->
+        <section class="features">
+            <h2 class="section-h2">تفاصيل سريعة</h2>
+            <table class="specs-table">
+                <tr><td>اسم الماركة</td><td>Generic</td></tr>
+                <tr><td>مدة الضمان</td><td>6 شهور (دوزن)</td></tr>
+                <tr><td>الأبعاد</td><td>60 × 30 × 158 سم</td></tr>
+                <tr><td>الخامة</td><td>معدن وقماش عالي الجودة</td></tr>
+                <tr><td>عدد الأرفف</td><td>9-10 أرفف تخزين</td></tr>
+                <tr><td>بلد الصنع</td><td>الصين</td></tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2026</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">الدفع عند الاستلام متاح | شحن آمن وسريع</p>
+        </div>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmojSHyHidvGaRqYFy1_4ZZkAd68NCWSgepDAXkuJE1PgNjWGYGHNzJ0Biv7wp2gPRaQ/exec';
+        const form = document.getElementById('landingForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function selectOffer(qty, price, element) {
+            document.querySelectorAll('.offer-card').forEach(c => c.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('qty_field').value = qty;
+            document.getElementById('price_field').value = price;
+            document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "جاري إرسال الطلب...";
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('شكراً لك! تم استلام طلبك بنجاح وسنتصل بك قريباً لتأكيده.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "تأكيد الطلب";
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('عذراً، حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "تأكيد الطلب";
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
 </body>
 </html>
