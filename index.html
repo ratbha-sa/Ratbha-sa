@@ -1,495 +1,513 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>خزانة تنظيم الأحذية 9 أرفف | Ratbha</title>
-  <meta name="description" content="خزانة لتنظيم الأحذية مكونة من 9 أرفف بتصميم عصري ومساحة تخزين كبيرة مع شحن مجاني وعروض خاصة لفترة محدودة.">
-  <meta name="keywords" content="خزانة أحذية, منظم أحذية, خزانة تنظيم الأحذية, رفوف أحذية, تخزين الأحذية, Ratbha">
-  <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خزانة تنظيم الأحذية 9 أرفف | ترتيب وأناقة لمنزلك</title>
+    <meta name="description" content="احصل على خزانة تنظيم الأحذية المكونة من 9 أرفف. تصميم متين، سهل التركيب، ومثالي لتوفير المساحة. اطلب الآن واستفد من الشحن المجاني والعروض الخاصة داخل السعودية.">
+    <meta name="keywords" content="منظم أحذية، خزانة أحذية، ترتيب المنزل، أرفف أحذية، منظم أحذية 9 أدوار، أثاث منزلي">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e67e22;
+            --accent-color: #27ae60;
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: #f7f7f7;
-      color: #111;
-      overflow-x: hidden;
-      line-height: 1.8;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    a {
-      text-decoration: none;
-    }
+        header img {
+            max-width: 140px;
+            height: auto;
+        }
 
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: auto;
-    }
+        /* Hero Section */
+        .hero-banner {
+            width: 100%;
+            display: block;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            border-bottom: 4px solid var(--secondary-color);
+        }
 
-    .hero {
-      background: linear-gradient(to bottom, #ffffff, #f1f1f1);
-      padding: 40px 0 70px;
-      position: relative;
-      overflow: hidden;
-    }
+        /* Product Intro */
+        .product-intro {
+            background: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: #d0ad73;
-      border-radius: 50%;
-      top: -250px;
-      left: -250px;
-      opacity: 0.08;
-    }
+        .product-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-    .logo {
-      width: 180px;
-      margin: auto;
-    }
+        .price-container {
+            margin: 15px 0;
+        }
 
-    .hero-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      align-items: center;
-      margin-top: 40px;
-    }
+        .main-price {
+            font-size: 32px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
 
-    .hero-text h1 {
-      font-size: 3rem;
-      line-height: 1.3;
-      margin-bottom: 20px;
-      font-weight: 900;
-    }
+        .shipping-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 15px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
 
-    .hero-text p {
-      color: #555;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
+        /* Image Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
 
-    .price-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
-    }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
 
-    .price-main {
-      font-size: 2.3rem;
-      font-weight: 900;
-      color: #000;
-    }
+        /* Features Section */
+        .features {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
 
-    .shipping {
-      color: #1b8a3d;
-      font-weight: 700;
-      margin-top: 10px;
-    }
+        .section-h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            border-right: 6px solid var(--secondary-color);
+            padding-right: 15px;
+        }
 
-    .cta-btn {
-      display: inline-block;
-      background: #000;
-      color: #fff;
-      padding: 16px 42px;
-      border-radius: 999px;
-      font-size: 1.1rem;
-      font-weight: 800;
-      transition: 0.3s;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
 
-    .cta-btn:hover {
-      transform: translateY(-4px);
-      background: #d0ad73;
-    }
+        .feature-item i {
+            color: var(--accent-color);
+            margin-left: 12px;
+            font-weight: bold;
+        }
 
-    .hero-image {
-      position: relative;
-    }
+        /* Offers Cards */
+        .offers-wrapper {
+            margin: 30px 0;
+        }
 
-    .hero-image img {
-      border-radius: 30px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
+        .offer-card {
+            background: var(--white);
+            border: 2px solid #eee;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
 
-    section {
-      padding: 80px 0;
-    }
+        .offer-card.active {
+            border-color: var(--secondary-color);
+            background: #fffbf5;
+        }
 
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
+        .offer-card.best-value::after {
+            content: "الأكثر توفيراً";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--secondary-color);
+            color: white;
+            font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+        .offer-details h4 {
+            font-size: 19px;
+            color: var(--primary-color);
+        }
 
-    .feature-card {
-      background: #fff;
-      padding: 28px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      transition: 0.3s;
-    }
+        .offer-details span {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 18px;
+        }
 
-    .feature-card:hover {
-      transform: translateY(-8px);
-    }
+        .savings-tag {
+            background: #ffecec;
+            color: #d63031;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
 
-    .feature-card h3 {
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-    }
+        /* Form Styling */
+        .order-form-box {
+            background: var(--white);
+            padding: 40px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin: 40px 0;
+            border-top: 5px solid var(--secondary-color);
+        }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
 
-    .gallery img {
-      border-radius: 24px;
-      height: 100%;
-      object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
+        .input-group {
+            margin-bottom: 20px;
+        }
 
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
 
-    .offers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1.5px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+            background: #fdfdfd;
+        }
 
-    .offer-card {
-      background: linear-gradient(145deg, #000, #1a1a1a);
-      color: #fff;
-      padding: 35px 25px;
-      border-radius: 28px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
+        input:focus, select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 8px rgba(230, 126, 34, 0.2);
+        }
 
-    .offer-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-    }
+        .required-star { color: #d63031; }
 
-    .offer-price {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #d0ad73;
-    }
+        .submit-btn {
+            background: var(--secondary-color);
+            color: white;
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
+            margin-top: 15px;
+            transition: 0.3s;
+        }
 
-    .offer-save {
-      margin-top: 10px;
-      color: #6fff95;
-      font-weight: bold;
-    }
+        .submit-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
 
-    .specs {
-      background: #fff;
-      border-radius: 30px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
+        /* Tech Details Table */
+        .specs-table {
+            width: 100%;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
 
-    .spec-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+        .specs-table tr {
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
 
-    .spec-item {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 20px;
-    }
+        .specs-table td {
+            padding: 15px;
+            font-size: 15px;
+        }
 
-    .spec-item strong {
-      display: block;
-      margin-bottom: 8px;
-    }
+        .specs-table td:first-child {
+            font-weight: 700;
+            background: #fafafa;
+            width: 35%;
+        }
 
-    .final-cta {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      border-radius: 40px;
-      padding: 70px 20px;
-    }
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
 
-    .final-cta h2 {
-      font-size: 2.7rem;
-      margin-bottom: 20px;
-    }
-
-    .final-cta p {
-      color: #ddd;
-      max-width: 700px;
-      margin: auto auto 30px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      color: #777;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .final-cta h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+        /* Responsive Fixes */
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .product-title { font-size: 22px; }
+            .offer-card { flex-direction: column; text-align: center; gap: 10px; }
+        }
+    </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="container">
-      <img class="logo" src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Ratbha Logo">
-
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>خزانة لتنظيم الأحذية مكونة من 9 أرفف</h1>
-          <p>
-            الحل الذكي لترتيب منزلك بطريقة أنيقة وعصرية.
-            مساحة أكبر، تنظيم أفضل، ومظهر راقٍ لكل أحذيتك.
-          </p>
-
-          <div class="price-box">
-            <div class="price-main">133 ريال فقط</div>
-            <div class="shipping">✔ شحن مجاني لجميع المناطق</div>
-          </div>
-
-          <a href="#offers" class="cta-btn">اطلب الآن</a>
+    <header>
+        <div class="container">
+            <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="Logo">
         </div>
+    </header>
 
-        <div class="hero-image">
-          <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="خزانة تنظيم الأحذية Ratbha">
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">لماذا Ratbha؟</h2>
-
-      <div class="features">
-        <div class="feature-card">
-          <h3>تنظيم مثالي</h3>
-          <p>تحافظ على جميع أحذيتك مرتبة ونظيفة في مكان واحد.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>9 أرفف واسعة</h3>
-          <p>تستوعب عددًا كبيرًا من الأحذية لتوفير المساحة.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>تصميم متين</h3>
-          <p>قوائم معدنية قوية مع خامات عالية الجودة وعمر طويل.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>سهلة التركيب</h3>
-          <p>تركيب سريع مع كتيب تعليمات واضح وسهل.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>خفيفة وسهلة النقل</h3>
-          <p>يمكن نقلها لأي مكان بسهولة دون أي مجهود.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>جيوب جانبية إضافية</h3>
-          <p>توفر مساحة تخزين إضافية للأغراض الصغيرة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#fff;">
-    <div class="container">
-      <h2 class="section-title">صور المنتج</h2>
-
-      <div class="gallery">
-        <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="خزانة أحذية">
-        <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="منظم أحذية">
-        <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="خزانة تنظيم">
-        <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="رفوف أحذية">
-        <img src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="خزانة أحذية حديثة">
-        <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="خزانة تخزين أحذية">
-        <img src="https://i.ibb.co/rfs3sQss/image-3.webp" alt="منظم أحذية ذكي">
-        <img src="https://i.ibb.co/DHTrwQYK/image-8.webp" alt="خزانة Ratbha">
-      </div>
-    </div>
-  </section>
-
-  <section id="offers">
-    <div class="container">
-      <h2 class="section-title">العروض الخاصة</h2>
-
-      <div class="offers">
-        <div class="offer-card">
-          <h3>قطعة واحدة</h3>
-          <div class="offer-price">133 ريال</div>
-          <p>شحن مجاني</p>
-        </div>
-
-        <div class="offer-card">
-          <h3>قطعتين</h3>
-          <div class="offer-price">184 ريال</div>
-          <div class="offer-save">وفر 82 ريال</div>
-        </div>
-
-        <div class="offer-card">
-          <h3>3 قطع</h3>
-          <div class="offer-price">229 ريال</div>
-          <div class="offer-save">وفر 170 ريال</div>
-        </div>
-
-        <div class="offer-card">
-          <h3>4 قطع</h3>
-          <div class="offer-price">308 ريال</div>
-          <div class="offer-save">وفر 224 ريال</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">تفاصيل المنتج</h2>
-
-      <div class="specs">
-        <div class="spec-grid">
-          <div class="spec-item">
-            <strong>اسم الماركة</strong>
-            Generic
-          </div>
-
-          <div class="spec-item">
-            <strong>مدة الضمان</strong>
-            6 شهور
-          </div>
-
-          <div class="spec-item">
-            <strong>الأبعاد</strong>
-            60 × 30 × 158 سم
-          </div>
-
-          <div class="spec-item">
-            <strong>الخامة</strong>
-            معدن وقماش
-          </div>
-
-          <div class="spec-item">
-            <strong>عدد الأرفف</strong>
-            9 أرفف
-          </div>
-
-          <div class="spec-item">
-            <strong>بلد الصنع</strong>
-            الصين
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="final-cta">
-        <h2>حوّل الفوضى إلى أناقة</h2>
-        <p>
-          احصل الآن على خزانة Ratbha الذكية لتنظيم الأحذية واستمتع بمساحة أكبر وترتيب مثالي لمنزلك.
-        </p>
-
-        <a href="#order-form" class="cta-btn">اطلب الآن</a>
-
-<section id="order-form">
-
-<form id="orderForm">
-  <input type="text" id="name" placeholder="الاسم" required>
-  <input type="text" id="phone" placeholder="رقم الجوال" required>
-  <input type="text" id="city" placeholder="المدينة" required>
-  <input type="text" id="address" placeholder="العنوان" required>
-  <textarea id="notes" placeholder="ملاحظات"></textarea>
-
-  <button type="submit" class="cta-btn">إرسال الطلب</button>
-</form>
-
-</section>
+    <main class="container">
         
-      </div>
-    </div>
-  </section>
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="Banner المنتج الرئيسي">
+        </div>
 
-  <footer>
-    © 2026 Ratbha - جميع الحقوق محفوظة
-  </footer>
-<script>
-document.getElementById("orderForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
+        <!-- Product Intro -->
+        <section class="product-intro">
+            <h1 class="product-title">خزانة لتنظيم الاحذية احترافية - مكونة من 9 أرفف</h1>
+            <div class="price-container">
+                <span class="main-price">133 ريال فقط</span>
+            </div>
+            <div class="shipping-badge">شحن مجاني لجميع مناطق المملكة 🚚</div>
+        </section>
 
-  const data = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    city: document.getElementById("city").value,
-    address: document.getElementById("address").value,
-    notes: document.getElementById("notes").value
-  };
+        <!-- Features -->
+        <section class="features">
+            <h2 class="section-h2">مميزات المنتج</h2>
+            <div class="feature-item"><i>✔</i> تحافظ على أحذيتك مرتبة ونظيفة في مكان واحد.</div>
+            <div class="feature-item"><i>✔</i> تحتوي على 9 أدوار تسع مجموعة كبيرة جداً من الأحذية.</div>
+            <div class="feature-item"><i>✔</i> تصميم متين وثابت مع قوائم معدنية عالية الجودة.</div>
+            <div class="feature-item"><i>✔</i> سهل التفكيك والتركيب للتنقل بسهولة تامة.</div>
+            <div class="feature-item"><i>✔</i> الجراب مصنوع من قماش فاخر قابل للغسل.</div>
+            <div class="feature-item"><i>✔</i> مزودة بجيوب جانبية لمساحة تخزين إضافية.</div>
+            <div class="feature-item"><i>✔</i> توفر مساحة هائلة في الغرفة وتمنع الفوضى.</div>
+            <div class="feature-item"><i>✔</i> جودة عالية تضمن لك عمر استخدام طويل جداً.</div>
+        </section>
 
-  await fetch("https://script.google.com/macros/s/AKfycbyq-mm3-w-82FTTCocXwtGcfifLuZHm_KSOlEjehyr3eJkQF9JRkPSV8At0Cf8NoeBxhA/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
+        <!-- Gallery -->
+        <section class="gallery-grid">
+            <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="صورة المنتج 1">
+            <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="صورة المنتج 2">
+            <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="صورة المنتج 3">
+            <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="صورة المنتج 4">
+            <img src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="صورة المنتج 5">
+            <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="صورة المنتج 6">
+        </section>
 
-  alert("تم إرسال الطلب بنجاح");
-});
-</script>
-  
+        <!-- Offers -->
+        <section class="offers-wrapper">
+            <h2 class="section-h2">اختر العرض المناسب لك</h2>
+            
+            <div class="offer-card" onclick="selectOffer(1, 133, this)">
+                <div class="offer-details">
+                    <h4>قطعة واحدة</h4>
+                    <span>133 ريال</span>
+                </div>
+                <div class="savings-tag">شحن مجاني</div>
+            </div>
+
+            <div class="offer-card active" onclick="selectOffer(2, 184, this)">
+                <div class="offer-details">
+                    <h4>قطعتين</h4>
+                    <span>184 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 82 ريال</div>
+            </div>
+
+            <div class="offer-card best-value" onclick="selectOffer(3, 229, this)">
+                <div class="offer-details">
+                    <h4>3 قطع</h4>
+                    <span>229 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 170 ريال</div>
+            </div>
+
+            <div class="offer-card" onclick="selectOffer(4, 308, this)">
+                <div class="offer-details">
+                    <h4>4 قطع</h4>
+                    <span>308 ريال</span>
+                </div>
+                <div class="savings-tag">خصم 224 ريال</div>
+            </div>
+        </section>
+
+        <!-- Checkout Form -->
+        <section id="checkout" class="order-form-box">
+            <h3 class="form-title">سجل بياناتك لإتمام الطلب</h3>
+            <form id="landingForm">
+                <div class="input-group">
+                    <label>الاسم كامل <span class="required-star">*</span></label>
+                    <input type="text" name="full_name" placeholder="أدخل اسمك الثلاثي" required>
+                </div>
+
+                <div class="input-group">
+                    <label>رقم الجوال <span class="required-star">*</span></label>
+                    <input type="tel" name="phone" placeholder="05xxxxxxxx" required>
+                </div>
+
+                <div class="input-group">
+                    <label>المدينة <span class="required-star">*</span></label>
+                    <select name="city" required>
+                        <option value="">-- اختر المنطقة --</option>
+                        <option value="الرياض">الرياض</option>
+                        <option value="جدة">جدة</option>
+                        <option value="مكة المكرمة">مكة المكرمة</option>
+                        <option value="المدينة المنورة">المدينة المنورة</option>
+                        <option value="الدمام">الدمام</option>
+                        <option value="الخبر">الخبر</option>
+                        <option value="القصيم">القصيم</option>
+                        <option value="أبها">أبها</option>
+                        <option value="تبوك">تبوك</option>
+                        <option value="حائل">حائل</option>
+                        <option value="جازان">جازان</option>
+                        <option value="نجران">نجران</option>
+                        <option value="الباحة">الباحة</option>
+                        <option value="الجوف">الجوف</option>
+                        <option value="الحدود الشمالية">الحدود الشمالية</option>
+                        <option value="الطائف">الطائف</option>
+                        <option value="القطيف">القطيف</option>
+                        <option value="ينبع">ينبع</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>العنوان <span class="required-star">*</span></label>
+                    <input type="text" name="address" placeholder="اسم الحي / الشارع" required>
+                </div>
+
+                <div class="input-group">
+                    <label>ملاحظات إضافية</label>
+                    <textarea name="notes" rows="3" placeholder="أي تفاصيل أخرى بخصوص التوصيل"></textarea>
+                </div>
+
+                <!-- Hidden values to catch order details -->
+                <input type="hidden" id="qty_field" name="quantity" value="2">
+                <input type="hidden" id="price_field" name="total_price" value="184">
+
+                <button type="submit" class="submit-btn">تأكيد الطلب</button>
+            </form>
+        </section>
+
+        <!-- Technical Specs -->
+        <section class="features">
+            <h2 class="section-h2">تفاصيل سريعة</h2>
+            <table class="specs-table">
+                <tr><td>اسم الماركة</td><td>Generic</td></tr>
+                <tr><td>مدة الضمان</td><td>6 شهور (دوزن)</td></tr>
+                <tr><td>الأبعاد</td><td>60 × 30 × 158 سم</td></tr>
+                <tr><td>الخامة</td><td>معدن وقماش عالي الجودة</td></tr>
+                <tr><td>عدد الأرفف</td><td>9-10 أرفف تخزين</td></tr>
+                <tr><td>بلد الصنع</td><td>الصين</td></tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2026</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">الدفع عند الاستلام متاح | شحن آمن وسريع</p>
+        </div>
+    </footer>
+
+    <script>
+        function selectOffer(qty, price, element) {
+            // Remove active class from all
+            document.querySelectorAll('.offer-card').forEach(c => c.classList.remove('active'));
+            // Add to current
+            element.classList.add('active');
+            
+            // Update hidden inputs
+            document.getElementById('qty_field').value = qty;
+            document.getElementById('price_field').value = price;
+            
+            // Auto scroll to form for better UX
+            document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('landingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('full_name');
+            const qty = formData.get('quantity');
+            const total = formData.get('total_price');
+            
+            // Simulated Success - Can be linked to WhatsApp API or Google Sheets
+            alert(`شكراً لك ${name}! 
+تم تسجيل طلبك لعدد (${qty}) قطع بمبلغ ${total} ريال بنجاح. سنتصل بك قريباً لتأكيد الشحن.`);
+            this.reset();
+        });
+    </script>
 </body>
 </html>
