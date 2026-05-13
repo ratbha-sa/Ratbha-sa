@@ -447,7 +447,15 @@
           احصل الآن على خزانة Ratbha الذكية لتنظيم الأحذية واستمتع بمساحة أكبر وترتيب مثالي لمنزلك.
         </p>
 
-<a href="#order-form" class="cta-btn">اطلب الآن</a>
+<form id="orderForm">
+  <input type="text" id="name" placeholder="الاسم" required>
+  <input type="text" id="phone" placeholder="رقم الجوال" required>
+  <input type="text" id="city" placeholder="المدينة" required>
+  <input type="text" id="address" placeholder="العنوان" required>
+  <textarea id="notes" placeholder="ملاحظات"></textarea>
+
+  <button type="submit" class="cta-btn">إرسال الطلب</button>
+</form>
       </div>
     </div>
   </section>
@@ -455,6 +463,26 @@
   <footer>
     © 2026 Ratbha - جميع الحقوق محفوظة
   </footer>
+<script>
+document.getElementById("orderForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
 
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    city: document.getElementById("city").value,
+    address: document.getElementById("address").value,
+    notes: document.getElementById("notes").value
+  };
+
+  await fetch("https://script.google.com/macros/s/AKfycbyq-mm3-w-82FTTCocXwtGcfifLuZHm_KSOlEjehyr3eJkQF9JRkPSV8At0Cf8NoeBxhA/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+
+  alert("تم إرسال الطلب بنجاح");
+});
+</script>
+  
 </body>
 </html>
