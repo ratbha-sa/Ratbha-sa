@@ -1196,13 +1196,12 @@
       try {
         const response = await fetch('https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec', {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(payload)
         });
-
-        if (!response.ok) throw new Error('Network Error');
 
         successMessage.style.display = 'block';
         form.reset();
