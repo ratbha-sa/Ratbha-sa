@@ -1,732 +1,272 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>خزانة تنظيم الأحذية 9 أرفف | رتّبها - الحل الذكي لمنزل منظم</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="احصل على خزانة تنظيم الأحذية المكونة من 9 أرفف من متجر رتّبها. تصميم متين، سعة كبيرة، وسهولة في التركيب. عرض محدود مع شحن مجاني ودفع عند الاستلام في السعودية.">
-    <meta name="keywords" content="خزانة أحذية، منظم أحذية، ترتيب المنزل، رفوف أحذية، رتبها، متجر رتبها، منظمات منزلية السعودية">
-    <link rel="canonical" href="https://your-username.github.io/ratbha/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-username.github.io/ratbha/">
-    <meta property="og:title" content="خزانة تنظيم الأحذية 9 أرفف | رتّبها">
-    <meta property="og:description" content="وداعاً للفوضى! خزانة الأحذية العصرية بـ 9 أرفف متوفرة الآن بخصم خاص وشحن مجاني.">
-    <meta property="og:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="خزانة لتنظيم الأحذية مكونة من 9 أرفف، متينة وسهلة التركيب، مع 9 أدوار لتخزين الأحذية. عروض خاصة، شحن مجاني.">
+<meta name="keywords" content="خزانة أحذية, تنظيم الأحذية, رفوف أحذية, متجر أحذية, تخزين الأحذية, شحن مجاني, عروض الأحذية">
+<title>خزانة لتنظيم الأحذية - متجر احترافي</title>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="خزانة تنظيم الأحذية 9 أرفف | رتّبها">
-    <meta property="twitter:description" content="الحل الأمثل لتنظيم أحذيتك بلمسة عصرية. اطلب الآن واستفد من عروض الكميات.">
-    <meta property="twitter:image" content="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp">
-
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #e67e22;
-            --accent-color: #27ae60;
-            --text-dark: #1a1a1a;
-            --text-light: #7f8c8d;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Base Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            background-color: var(--bg-light); 
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
-
-        /* Typography */
-        h1, h2, h3 { font-family: 'Tajawal', sans-serif; font-weight: 700; }
-
-        /* Utility Classes */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn-shine {
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-shine::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255,255,255,0.2);
-            transform: rotate(45deg);
-            transition: 0.5s;
-            left: -100%;
-        }
-        .btn-shine:hover::after { left: 100%; }
-
-        /* Scroll Progress Bar */
-        #scroll-progress {
-            position: fixed; top: 0; right: 0; height: 4px;
-            background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-            z-index: 1000; width: 0%;
-        }
-
-        /* Sticky Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: var(--shadow);
-        }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 50px; transition: var(--transition); }
-        .logo img:hover { transform: scale(1.05); }
-
-        /* Announcement Bar */
-        .announcement {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 8px 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 40px 0;
-            background: var(--white);
-            border-bottom: 1px solid #eee;
-        }
-        .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
-        .hero-image-container { position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
-        .hero-image-container img { width: 100%; display: block; }
-        .hero-badge {
-            position: absolute; top: 20px; right: 20px;
-            background: var(--secondary-color); color: white;
-            padding: 10px 20px; border-radius: 50px; font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-
-        .hero-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color); }
-        .price-tag { font-size: 2rem; color: var(--secondary-color); font-weight: 800; margin-bottom: 15px; }
-        .price-tag span { font-size: 1rem; color: var(--text-light); text-decoration: line-through; margin-right: 10px; }
-
-        .trust-badges { display: flex; gap: 15px; margin-top: 25px; }
-        .t-badge { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; }
-        .t-badge i { color: var(--accent-color); }
-
-        /* Countdown Timer */
-        .timer-box {
-            background: #fff5eb;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 25px 0;
-            border: 1px dashed var(--secondary-color);
-            text-align: center;
-        }
-        .timer-display { display: flex; justify-content: center; gap: 15px; margin-top: 10px; }
-        .time-unit { background: var(--primary-color); color: white; padding: 10px; border-radius: 8px; min-width: 60px; }
-        .time-unit span { display: block; font-size: 1.2rem; font-weight: bold; }
-        .time-unit label { font-size: 0.7rem; }
-
-        /* Feature Bar */
-        .feature-bar {
-            background: var(--white);
-            padding: 30px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-        .feature-item i { font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; }
-        .feature-item h4 { font-size: 1rem; margin-bottom: 5px; }
-
-        /* Product Gallery */
-        .gallery-section { padding: 60px 0; background: #fff; }
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { font-size: 2rem; position: relative; display: inline-block; padding-bottom: 10px; }
-        .section-title h2::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 80px; height: 4px; background: var(--secondary-color); border-radius: 2px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-        }
-        .gallery-item:hover { transform: translateY(-5px); }
-        .gallery-item img { width: 100%; height: 280px; object-fit: cover; }
-
-        /* Features/Specs Section */
-        .specs-section { padding: 80px 0; background: var(--bg-light); }
-        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .spec-list { list-style: none; }
-        .spec-list li {
-            background: white;
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-            transition: var(--transition);
-        }
-        .spec-list li:hover { transform: translateX(-10px); color: var(--secondary-color); }
-        .spec-list li i { color: var(--accent-color); font-size: 1.2rem; }
-
-        /* Offers Section */
-        .offers-section { padding: 80px 0; background: var(--primary-color); color: white; }
-        .offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        .offer-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: var(--transition);
-            position: relative;
-        }
-        .offer-card.popular {
-            background: white;
-            color: var(--primary-color);
-            transform: scale(1.05);
-            border: 2px solid var(--secondary-color);
-        }
-        .offer-card.popular .best-tag {
-            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
-            background: var(--secondary-color); color: white; padding: 5px 20px;
-            border-radius: 20px; font-size: 0.8rem; font-weight: bold;
-        }
-        .offer-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .offer-price { font-size: 2.2rem; font-weight: 800; margin: 15px 0; }
-        .offer-save { color: var(--accent-color); font-weight: bold; display: block; margin-bottom: 20px; }
-
-        /* Order Form Section */
-        .order-section { padding: 80px 0; background: var(--white); }
-        .order-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
-        
-        .order-summary-box {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: 20px;
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-        .summary-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; }
-        .summary-total { border-top: 2px solid #ddd; margin-top: 15px; padding-top: 15px; font-size: 1.3rem; font-weight: 800; color: var(--secondary-color); }
-
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #eee;
-            border-radius: 12px;
-            font-family: 'Cairo';
-            transition: var(--transition);
-        }
-        .form-control:focus { border-color: var(--secondary-color); box-shadow: 0 0 10px rgba(230, 126, 34, 0.1); }
-        
-        select.form-control { appearance: none; background-image: url("data:image/svg+xml,..."); background-repeat: no-repeat; background-position: left 15px center; }
-
-        .submit-btn {
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(135deg, var(--secondary-color), #d35400);
-            color: white;
-            border: none;
-            border-radius: 15px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
-            animation: pulse-glow 2s infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Success Popup */
-        .overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8); z-index: 2000; display: none;
-            justify-content: center; align-items: center; backdrop-filter: blur(5px);
-        }
-        .success-card {
-            background: white; padding: 40px; border-radius: 30px; text-align: center;
-            max-width: 400px; width: 90%; transform: scale(0.7); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .overlay.active { display: flex; }
-        .overlay.active .success-card { transform: scale(1); }
-        .success-icon { width: 80px; height: 80px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; margin: 0 auto 20px; }
-
-        /* FAQ */
-        .faq-section { padding: 80px 0; background: var(--bg-light); }
-        .faq-item { background: white; margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
-        .faq-question { padding: 20px; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease; color: var(--text-light); }
-        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 200px; }
-        .faq-item.active i { transform: rotate(180deg); }
-
-        /* Footer */
-        footer { background: var(--primary-color); color: white; padding: 60px 0 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-about img { height: 50px; margin-bottom: 20px; filter: brightness(0) invert(1); }
-        .footer-links h4 { margin-bottom: 20px; color: var(--secondary-color); }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 10px; font-size: 0.9rem; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; color: #bdc3c7; }
-
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed; bottom: 20px; right: 20px; z-index: 900;
-            background: var(--secondary-color); color: white; width: 60px; height: 60px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2); text-decoration: none; font-size: 24px;
-            animation: bounce 2s infinite;
-        }
-
-        /* Animations */
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @keyframes pulse-glow { 
-            0% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(230, 126, 34, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
-        }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-grid, .specs-grid, .order-container { grid-template-columns: 1fr; }
-            .hero-content { text-align: center; }
-            .trust-badges { justify-content: center; }
-            .hero-content h1 { font-size: 1.8rem; }
-            .order-summary-box { position: static; margin-bottom: 30px; }
-        }
-    </style>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin:0;
+    padding:0;
+    background-color:#f9f9f9;
+    color:#333;
+}
+header {
+    background-color:#1a73e8;
+    color:white;
+    text-align:center;
+    padding: 20px 0;
+}
+header img {
+    max-height: 60px;
+}
+.banner {
+    width:100%;
+    display:block;
+}
+.container {
+    width:90%;
+    max-width:1200px;
+    margin: 20px auto;
+}
+h1, h2, h3 {
+    text-align:center;
+}
+.product-images {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin: 20px 0;
+}
+.product-images img {
+    width:100%;
+    border-radius:8px;
+    transition: transform 0.3s;
+}
+.product-images img:hover {
+    transform: scale(1.05);
+}
+.features, .specs, .offers {
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+.features ul, .specs ul {
+    list-style: none;
+    padding:0;
+}
+.features li, .specs li {
+    margin:8px 0;
+}
+.offer-item {
+    font-weight:bold;
+    margin:10px 0;
+    color:#e53935;
+}
+form {
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+form input, form select, form textarea, form button {
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+form button {
+    background-color:#1a73e8;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    transition: transform 0.2s;
+}
+form button:hover {
+    transform: scale(1.05);
+}
+#order-summary {
+    background:#e8f0fe;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+.pulse {
+    animation: pulse 0.5s ease;
+}
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+footer {
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+    background:#1a73e8;
+    color:white;
+}
+</style>
 </head>
 <body>
 
-    <div id="scroll-progress"></div>
+<header>
+    <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="شعار المتجر">
+    <h1>خزانة لتنظيم الأحذية مكونة من 9 أرفف</h1>
+</header>
 
-    <div class="announcement">
-        🔥 عرض خاص لفترة محدودة: شحن مجاني لجميع مناطق المملكة!
-    </div>
+<img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="بانر المنتج" class="banner">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="رتّبها | Ratbha">
-                </a>
-                <div class="live-stats" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-color);">
-                    <i class="fas fa-eye"></i> <span id="view-count">48</span> شخص يشاهدون المنتج الآن
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-image-container animate__animated animate__fadeInRight">
-                    <img src="https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp" alt="منظم أحذية 9 أرفف">
-                    <div class="hero-badge">الأكثر مبيعاً</div>
-                </div>
-                <div class="hero-content animate__animated animate__fadeInLeft">
-                    <h1>خزانة تنظيم الأحذية العصرية - 9 أرفف متينة</h1>
-                    <div class="price-tag">133 ريال <span>215 ريال</span></div>
-                    <p class="text-light">الحل المثالي لتنظيم مدخل منزلك وتوفير مساحة هائلة مع تصميم فخم يناسب جميع الديكورات.</p>
-                    
-                    <div class="timer-box">
-                        <p>⚡ ينتهي الخصم خلال:</p>
-                        <div class="timer-display" id="timer">
-                            <div class="time-unit"><span id="hours">02</span><label>ساعة</label></div>
-                            <div class="time-unit"><span id="minutes">45</span><label>دقيقة</label></div>
-                            <div class="time-unit"><span id="seconds">12</span><label>ثانية</label></div>
-                        </div>
-                    </div>
-
-                    <a href="#order-form" class="submit-btn btn-shine" style="text-decoration: none;">
-                        اطلب الآن - الدفع عند الاستلام
-                    </a>
-
-                    <div class="trust-badges">
-                        <div class="t-badge"><i class="fas fa-shipping-fast"></i> شحن سريع</div>
-                        <div class="t-badge"><i class="fas fa-shield-alt"></i> ضمان 6 شهور</div>
-                        <div class="t-badge"><i class="fas fa-check-circle"></i> جودة مضمونة</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <section class="product-images">
+        <img src="https://i.ibb.co/wrJBNkg4/image-5.webp" alt="صورة المنتج 1">
+        <img src="https://i.ibb.co/RqP3G3d/image-7.webp" alt="صورة المنتج 2">
+        <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" alt="صورة المنتج 3">
+        <img src="https://i.ibb.co/5gCqmv3t/image-4.webp" alt="صورة المنتج 4">
+        <img src="https://i.ibb.co/bMz32c9T/image-2.webp" alt="صورة المنتج 5">
+        <img src="https://i.ibb.co/kVX0dH2X/image-1.webp" alt="صورة المنتج 6">
+        <img src="https://i.ibb.co/rfs3sQss/image-3.webp" alt="صورة المنتج 7">
+        <img src="https://i.ibb.co/DHTrwQYK/image-8.webp" alt="صورة المنتج 8">
     </section>
 
-    <div class="feature-bar container">
-        <div class="feature-item">
-            <i class="fas fa-box-open"></i>
-            <h4>سعة كبيرة</h4>
-            <p>تتسع لـ 27 زوج من الأحذية</p>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-tools"></i>
-            <h4>تركيب سهل</h4>
-            <p>لا يحتاج لأدوات خارجية</p>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-wind"></i>
-            <h4>خامة قابلة للغسل</h4>
-            <p>قماش عالي الجودة متين</p>
-        </div>
-        <div class="feature-item">
-            <i class="fas fa-layer-group"></i>
-            <h4>توفير مساحة</h4>
-            <p>تصميم طولي ذكي</p>
-        </div>
-    </div>
-
-    <section class="gallery-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>صور المنتج الواقعية</h2>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://i.ibb.co/wrJBNkg4/image-5.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/RqP3G3d/image-7.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/5gCqmv3t/image-4.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/bMz32c9T/image-2.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/kVX0dH2X/image-1.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/rfs3sQss/image-3.webp" loading="lazy"></div>
-                <div class="gallery-item"><img src="https://i.ibb.co/DHTrwQYK/image-8.webp" loading="lazy"></div>
-            </div>
-        </div>
+    <section class="features">
+        <h2>المميزات</h2>
+        <ul>
+            <li>تحافظ على الأحذية مرتبة ونظيفة</li>
+            <li>9 أدوار لتخزين مجموعة كبيرة من الأحذية</li>
+            <li>تصميم متين وثابت مع قوائم معدنية</li>
+            <li>قماش عالي الجودة يمكن غسله بسهولة</li>
+            <li>سهلة التركيب مع كتيب تعليمات واضح</li>
+            <li>مزودة بجيوب جانبية للتخزين الإضافي</li>
+            <li>خفيفة الوزن وسهلة النقل لأي مكان</li>
+            <li>توفر مساحة وتمنع الفوضى</li>
+            <li>جودة عالية لضمان عمر استخدام طويل</li>
+        </ul>
     </section>
 
-    <section class="specs-section">
-        <div class="container">
-            <div class="specs-grid">
-                <div class="specs-content">
-                    <div class="section-title" style="text-align: right;">
-                        <h2>المواصفات التقنية</h2>
-                    </div>
-                    <ul class="spec-list">
-                        <li><i class="fas fa-ruler-combined"></i> <span>المقاس: 60 × 30 × 158 سم</span></li>
-                        <li><i class="fas fa-layer-group"></i> <span>عدد الأرفف: 9 أرفف واسعة</span></li>
-                        <li><i class="fas fa-cubes"></i> <span>الخامة: هيكل معدني + قماش مقوى</span></li>
-                        <li><i class="fas fa-palette"></i> <span>اللون: ألوان عصرية متنوعة (عشوائي)</span></li>
-                        <li><i class="fas fa-shield-heart"></i> <span>الضمان: 6 أشهر من الوكيل (دوزن)</span></li>
-                        <li><i class="fas fa-info-circle"></i> <span>جيوب جانبية إضافية للتخزين</span></li>
-                    </ul>
-                </div>
-                <div class="specs-img">
-                    <img src="https://i.ibb.co/5W0g2Yrb/image-6.webp" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow);">
-                </div>
-            </div>
-        </div>
+    <section class="specs">
+        <h2>المواصفات السريعة</h2>
+        <ul>
+            <li>الماركة: Generic</li>
+            <li>مدة الضمان: 6 شهور</li>
+            <li>وكيل الضمان: دوزن</li>
+            <li>اللون: عشوائي</li>
+            <li>الأبعاد: 60 × 30 × 158 سم</li>
+            <li>عدد الأرفف: 9 أو 10</li>
+            <li>الخامة: معدن وقماش</li>
+            <li>بلد الصنع: الصين</li>
+            <li>طريقة التركيب: سهلة مع كتيب تعليمات</li>
+        </ul>
     </section>
 
-    <section class="offers-section" id="offers">
-        <div class="container">
-            <div class="section-title">
-                <h2 style="color: white;">اختر العرض المناسب لك</h2>
-                <p>وفر أكثر عند شراء أكثر من قطعة</p>
-            </div>
-            <div class="offers-grid">
-                <div class="offer-card" onclick="selectOffer(1, 133, 0)">
-                    <h3>قطعة واحدة</h3>
-                    <div class="offer-price">133 ريال</div>
-                    <span class="offer-save">شحن مجاني</span>
-                    <button class="form-control" style="cursor:pointer">اختيار العرض</button>
-                </div>
-                <div class="offer-card popular" onclick="selectOffer(2, 184, 82)">
-                    <div class="best-tag">الأكثر طلباً</div>
-                    <h3>قطعتين (للعائلة)</h3>
-                    <div class="offer-price">184 ريال</div>
-                    <span class="offer-save">وفرت 82 ريال</span>
-                    <button class="form-control" style="background: var(--primary-color); color: white; border: none; cursor:pointer">اختيار العرض</button>
-                </div>
-                <div class="offer-card" onclick="selectOffer(3, 229, 170)">
-                    <h3>3 قطع (التوفير الكبير)</h3>
-                    <div class="offer-price">229 ريال</div>
-                    <span class="offer-save">وفرت 170 ريال</span>
-                    <button class="form-control" style="cursor:pointer">اختيار العرض</button>
-                </div>
-            </div>
-        </div>
+    <section class="offers">
+        <h2>العروض الخاصة</h2>
+        <div class="offer-item">1 قطعة بسعر 133 ريال - شحن مجاني</div>
+        <div class="offer-item">2 قطع بسعر 184 ريال - خصم 82 ريال</div>
+        <div class="offer-item">3 قطع بسعر 229 ريال - خصم 170 ريال</div>
+        <div class="offer-item">4 قطع بسعر 308 ريال - خصم 224 ريال</div>
     </section>
 
-    <section class="order-section" id="order-form">
-        <div class="container">
-            <div class="section-title">
-                <h2>أكمل طلبك الآن</h2>
-                <p>يرجى ملء البيانات أدناه لتأكيد الطلب</p>
-            </div>
-            <div class="order-container">
-                <div class="order-summary-box">
-                    <h3 style="margin-bottom: 20px;"><i class="fas fa-shopping-cart"></i> ملخص الطلب</h3>
-                    <div class="summary-item"><span>المنتج:</span> <span>خزانة أحذية 9 أرفف</span></div>
-                    <div class="summary-item"><span>الكمية:</span> <span id="summary-qty">1 قطعة</span></div>
-                    <div class="summary-item"><span>سعر الوحدة:</span> <span id="summary-unit">133 ريال</span></div>
-                    <div class="summary-item"><span>الخصم:</span> <span id="summary-discount" style="color: var(--accent-color);">0 ريال</span></div>
-                    <div class="summary-item"><span>الشحن:</span> <span style="color: var(--accent-color);">مجاني</span></div>
-                    <div class="summary-total">الإجمالي: <span id="summary-total">133 ريال</span></div>
-                    <p style="font-size: 0.75rem; margin-top: 15px; color: #7f8c8d;">* الدفع نقداً عند استلام الطلب من المندوب</p>
-                </div>
+    <section class="order-form">
+        <h2>اطلب الآن</h2>
+        <form id="productForm">
+            <input type="text" id="fullName" placeholder="الاسم كامل" required>
+            <input type="tel" id="phone" placeholder="رقم الجوال" required>
+            <select id="city" required>
+                <option value="">اختر المدينة</option>
+                <option>الرياض</option>
+                <option>جدة</option>
+                <option>مكة المكرمة</option>
+                <option>المدينة المنورة</option>
+                <option>الدمام</option>
+                <option>الخبر</option>
+                <option>الظهران</option>
+                <option>الهفوف</option>
+                <option>أبها</option>
+                <option>بريدة</option>
+                <option>تبوك</option>
+                <option>حائل</option>
+                <option>القصيم</option>
+                <option>جازان</option>
+                <option>نجران</option>
+                <option>عرعر</option>
+                <option>سكاكا</option>
+                <option>جيزان</option>
+            </select>
+            <input type="text" id="address" placeholder="العنوان" required>
+            <select id="quantity" required>
+                <option value="">اختر العرض أو الكمية</option>
+                <option value="1 قطعة - 133 ريال">1 قطعة - 133 ريال</option>
+                <option value="2 قطع - 184 ريال">2 قطع - 184 ريال</option>
+                <option value="3 قطع - 229 ريال">3 قطع - 229 ريال</option>
+                <option value="4 قطع - 308 ريال">4 قطع - 308 ريال</option>
+            </select>
+            <textarea id="notes" placeholder="ملاحظات (اختياري)"></textarea>
+            <button type="submit">تأكيد الطلب</button>
+        </form>
 
-                <form id="purchase-form" class="animate__animated animate__fadeIn">
-                    <input type="hidden" id="selected-offer" name="offer" value="1 قطعة">
-                    <input type="hidden" id="final-price" name="total_price" value="133">
-                    
-                    <div class="form-group">
-                        <label>الاسم الكامل</label>
-                        <input type="text" name="name" class="form-control" placeholder="أدخل اسمك الثلاثي" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>رقم الجوال (واتساب)</label>
-                        <input type="tel" name="phone" class="form-control" placeholder="05xxxxxxxx" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>المنطقة / المدينة</label>
-                        <select name="city" class="form-control" required>
-                            <option value="">اختر مدينتك</option>
-                            <option>الرياض</option><option>جدة</option><option>مكة المكرمة</option>
-                            <option>المدينة المنورة</option><option>الدمام</option><option>الخبر</option>
-                            <option>القصيم</option><option>تبوك</option><option>أبها</option>
-                            <option>خميس مشيط</option><option>جيزان</option><option>نجران</option>
-                            <option>حائل</option><option>الجوف</option><option>مدن أخرى</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>العنوان بالتفصيل</label>
-                        <input type="text" name="address" class="form-control" placeholder="اسم الحي - الشارع" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>ملاحظات إضافية (اختياري)</label>
-                        <textarea name="notes" class="form-control" rows="2"></textarea>
-                    </div>
-
-                    <button type="submit" id="submit-btn" class="submit-btn btn-shine">
-                        <span id="btn-text">تأكيد طلب الشراء مجاناً</span>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                    
-                    <div id="form-loader" style="display:none; text-align:center; margin-top:15px;">
-                        <i class="fas fa-spinner fa-spin"></i> جاري إرسال طلبك...
-                    </div>
-                </form>
-            </div>
-        </div>
+        <div id="order-summary"></div>
     </section>
+</div>
 
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-title"><h2>الأسئلة الشائعة</h2></div>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <div class="faq-question">هل التركيب صعب؟ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">أبداً! المنتج مصمم ليكون سهل التركيب جداً، ويأتي معه كتيب تعليمات بالصور يوضح كل خطوة، ولن تحتاج لأي أدوات خارجية.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">كم تستغرق مدة الشحن؟ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">يتم توصيل الطلب خلال 2 إلى 5 أيام عمل لجميع مناطق المملكة العربية السعودية.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">ما هي سياسة الاسترجاع؟ <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">نضمن لك حق الاستبدال أو الاسترجاع في حال وجود عيب مصنعي أو عدم مطابقة المنتج للمواصفات خلال 7 أيام من الاستلام.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+    جميع الحقوق محفوظة &copy; 2026
+</footer>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="https://i.ibb.co/bcy7J7b/Chat-GPT-Image-13-2026-01-22-11.webp" alt="رتّبها">
-                    <p>رتّبها (Ratbha) - علامتكم التجارية الرائدة في حلول التنظيم المنزلي الذكية في السعودية.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><i class="fas fa-caret-left"></i> سياسة الخصوصية</li>
-                        <li><i class="fas fa-caret-left"></i> سياسة الاستبدال</li>
-                        <li><i class="fas fa-caret-left"></i> تتبع الطلب</li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>تواصل معنا</h4>
-                    <p><i class="fas fa-envelope"></i> support@ratbha.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> المستودعات المركزية - الرياض</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                جميع الحقوق محفوظة لمتجر رتّبها &copy; 2026
-            </div>
-        </div>
-    </footer>
+<script>
+const form = document.getElementById('productForm');
+const summary = document.getElementById('order-summary');
 
-    <a href="#order-form" class="floating-cta">
-        <i class="fas fa-shopping-cart"></i>
-    </a>
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const fullName = document.getElementById('fullName').value;
+    const phone = document.getElementById('phone').value;
+    const city = document.getElementById('city').value;
+    const address = document.getElementById('address').value;
+    const quantity = document.getElementById('quantity').value;
+    const notes = document.getElementById('notes').value;
 
-    <!-- Success Overlay -->
-    <div class="overlay" id="success-overlay">
-        <div class="success-card">
-            <div class="success-icon"><i class="fas fa-check"></i></div>
-            <h2 style="color: var(--accent-color); margin-bottom: 10px;">تم استلام طلبك بنجاح!</h2>
-            <p>شكراً لثقتك بمتجر رتّبها. سيقوم أحد موظفينا بالتواصل معك قريباً عبر الجوال لتأكيد الشحن.</p>
-            <button onclick="closeSuccess()" class="form-control" style="margin-top: 20px; background: var(--primary-color); color: white; cursor: pointer;">موافق</button>
-        </div>
-    </div>
+    // إنشاء ملخص الطلب الديناميكي
+    summary.innerHTML = `
+        <h3>ملخص الطلب:</h3>
+        <p><strong>الاسم:</strong> ${fullName}</p>
+        <p><strong>رقم الجوال:</strong> ${phone}</p>
+        <p><strong>المدينة:</strong> ${city}</p>
+        <p><strong>العنوان:</strong> ${address}</p>
+        <p><strong>الكمية/العرض:</strong> ${quantity}</p>
+        ${notes ? `<p><strong>ملاحظات:</strong> ${notes}</p>` : ''}
+    `;
+    summary.classList.add('pulse');
 
-    <script>
-        // Scroll Progress
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
-        };
-
-        // Live View Counter
-        setInterval(() => {
-            let count = Math.floor(Math.random() * (65 - 40 + 1)) + 40;
-            document.getElementById('view-count').innerText = count;
-        }, 5000);
-
-        // Countdown Timer
-        function startTimer(duration) {
-            let timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                document.getElementById('hours').textContent = hours < 10 ? "0" + hours : hours;
-                document.getElementById('minutes').textContent = minutes < 10 ? "0" + minutes : minutes;
-                document.getElementById('seconds').textContent = seconds < 10 ? "0" + seconds : seconds;
-
-                if (--timer < 0) timer = duration;
-            }, 1000);
+    // إرسال البيانات إلى Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec', {
+        method:'POST',
+        body: JSON.stringify({fullName, phone, city, address, quantity, notes}),
+        headers: {
+            'Content-Type':'application/json'
         }
-        startTimer(3600 * 3); // 3 hours
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('تم استلام طلبك بنجاح!');
+        form.reset();
+    })
+    .catch(error => {
+        alert('حدث خطأ أثناء إرسال الطلب، حاول مرة أخرى.');
+        console.error(error);
+    });
 
-        // Offer Selection
-        function selectOffer(qty, price, discount) {
-            document.getElementById('selected-offer').value = qty + " قطعة";
-            document.getElementById('final-price').value = price;
-            
-            document.getElementById('summary-qty').innerText = qty + " قطعة";
-            document.getElementById('summary-total').innerText = price + " ريال";
-            document.getElementById('summary-discount').innerText = discount + " ريال";
-            document.getElementById('summary-unit').innerText = (qty === 1 ? "133" : (price/qty).toFixed(0)) + " ريال";
-            
-            document.querySelector('#order-form').scrollIntoView({ behavior: 'smooth' });
-        }
+    // إزالة التأثير بعد انتهاء
+    setTimeout(()=>{summary.classList.remove('pulse');}, 600);
+});
+</script>
 
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-
-        // Form Submission
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec';
-        const form = document.getElementById('purchase-form');
-        const btn = document.getElementById('submit-btn');
-        const loader = document.getElementById('form-loader');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            btn.disabled = true;
-            btn.style.opacity = '0.5';
-            loader.style.display = 'block';
-
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    document.getElementById('success-overlay').classList.add('active');
-                    form.reset();
-                    btn.disabled = false;
-                    btn.style.opacity = '1';
-                    loader.style.display = 'none';
-                })
-                .catch(error => {
-                    alert('عذراً، حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.');
-                    btn.disabled = false;
-                    btn.style.opacity = '1';
-                    loader.style.display = 'none';
-                });
-        });
-
-        function closeSuccess() {
-            document.getElementById('success-overlay').classList.remove('active');
-        }
-
-        // Prevent Copying (Simple Protection)
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
-
-    <!-- Schema Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "خزانة تنظيم الأحذية 9 أرفف",
-      "image": "https://i.ibb.co/hxXZgLNL/Chat-GPT-Image-13-2026-01-29-35.webp",
-      "description": "خزانة متينة بـ 9 أرفف لتنظيم الأحذية وتوفير المساحة.",
-      "brand": { "@type": "Brand", "name": "Generic" },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "SAR",
-        "price": "133.00",
-        "availability": "https://schema.org/InStock",
-        "seller": { "@type": "Organization", "name": "Ratbha" }
-      }
-    }
-    </script>
 </body>
 </html>
