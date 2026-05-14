@@ -1182,25 +1182,58 @@
 
       const [price, discount, label] = offerSelect.value.split('|');
 
-      const payload = {
+      const quantityMap = {
+        'قطعة واحدة': '1',
+        'قطعتين': '2',
+        '3 قطع': '3',
+        '4 قطع': '4'
+      };
+
+      const payload = new URLSearchParams({
         name: name.value,
         phone: phone.value,
         city: city.value,
         address: address.value,
         offer: label,
+        quantity: quantityMap[label] || '1',
+        total: price,
         price: price,
         discount: discount,
-        notes: notes.value
-      };
+        notes: notes.value || '',
+
+        // Arabic keys for Google Sheets compatibility
+        الاسم: name.value,
+        name_ar: name.value,
+        full_name: name.value,
+
+        الجوال: phone.value,
+        phone_ar: phone.value,
+
+        المدينة: city.value,
+        city_ar: city.value,
+
+        العنوان: address.value,
+        address_ar: address.value,
+
+        الكمية: quantityMap[label] || '1',
+        quantity_ar: quantityMap[label] || '1',
+
+        السعر: price,
+        السعر_الاجمالي: price,
+        الاجمالي: price,
+        total_price: price,
+
+        ملاحظات: notes.value || ''
+      });
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec', {
+        await fetch('https://script.google.com/macros/s/AKfycbx3xdQglwCtWpiJ73Mcy6g4qYUko6GIuGvUoIayCT3Ccn18-aHw-4fQRVL0Q1UotLlYBg/exec', {
           method: 'POST',
           mode: 'no-cors',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
           },
-          body: JSON.stringify(payload)
+          body: payload.toString()
         });
 
         successMessage.style.display = 'block';
