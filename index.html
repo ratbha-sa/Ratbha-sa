@@ -968,7 +968,7 @@
                 <textarea id="notes" rows="4"></textarea>
               </div>
 
-              <button type="submit" class="cta-btn" id="submitBtn">
+              <button type="submit" class="cta-btn" id="submitBtn" onclick="sendOrderTelegram()">
                 تأكيد الطلب
               </button>
 
@@ -1319,6 +1319,42 @@ top:0,
 behavior:"smooth"
 });
 });
+</script>
+  <script>
+async function sendOrder() {
+
+  const token = "8841357976:AAHyr_HiymZhgF0ICQYht6sYHThF9SC4u1M";
+  const chatId = "1976111983";
+
+  const message = `
+🔥 طلب جديد من متجر Rathba
+
+🛒 المنتج: خزانة الأحذية الذكية
+📦 يوجد عميل جديد طلب المنتج الآن
+`;
+
+  try {
+
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      })
+    });
+
+    alert("تم إرسال الطلب بنجاح");
+
+  } catch(error) {
+
+    alert("حدث خطأ");
+
+  }
+
+}
 </script>
   
 </body>
