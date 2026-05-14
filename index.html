@@ -1010,8 +1010,13 @@ document.getElementById("notes").value = data.notes || "";
 
   
 </script>
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})"
-style="
+<button id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
+<style>
+#topBtn{
 position:fixed;
 bottom:90px;
 left:20px;
@@ -1025,9 +1030,31 @@ font-size:24px;
 cursor:pointer;
 z-index:9999;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
-">
-↑
-</button>
+
+opacity:0;
+visibility:hidden;
+transition:.3s;
+}
+
+#topBtn.show{
+opacity:1;
+visibility:visible;
+}
+</style>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY > 400){
+topBtn.classList.add("show");
+}else{
+topBtn.classList.remove("show");
+}
+
+});
+</script>
   
 </body>
 </html>
