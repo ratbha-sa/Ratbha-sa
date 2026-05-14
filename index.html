@@ -1251,6 +1251,55 @@
     
     
 
-    
+    <!-- زر الرجوع للأعلى -->
+<button id="scrollTopBtn">↑</button>
+
+<style>
+#scrollTopBtn{
+position:fixed;
+bottom:90px;
+left:18px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:#111827;
+font-size:28px;
+font-weight:bold;
+cursor:pointer;
+z-index:99999;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+visibility:hidden;
+transition:.3s;
+}
+
+#scrollTopBtn.show{
+opacity:1;
+visibility:visible;
+}
+</style>
+
+<script>
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+if(window.scrollY > 300){
+scrollTopBtn.classList.add("show");
+}else{
+scrollTopBtn.classList.remove("show");
+}
+});
+
+scrollTopBtn.addEventListener("click", () => {
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+});
+</script>
 </body>
 </html>
