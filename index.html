@@ -968,7 +968,7 @@
                 <textarea id="notes" rows="4"></textarea>
               </div>
 
-              <button type="button" onclick="sendOrder()" class="cta-btn">
+              <button type="submit" class="cta-btn" id="submitBtn">
 تأكيد الطلب
 </button>
 
@@ -1319,68 +1319,6 @@ top:0,
 behavior:"smooth"
 });
 });
-</script>
-  <script>
-
-async function sendOrder() {
-
-const token = "8841357976:AAHyr_HiymZhgFOICQYht6sYHThF9SC4u1M";
-const chatId = "1976111983";
-
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const city = document.getElementById("city").value;
-const address = document.getElementById("address").value;
-const offer = document.getElementById("offer").value;
-const notes = document.getElementById("notes").value;
-
-const message = `
-🔥 طلب جديد
-
-👤 الاسم: ${name}
-📞 الجوال: ${phone}
-🏙️ المدينة: ${city}
-📍 العنوان: ${address}
-🛒 العرض: ${offer}
-📝 ملاحظات: ${notes}
-`;
-
-try {
-
-const response = await fetch(
-`https://api.telegram.org/bot8841357976:AAHyr_HiymZhgFOICQYht6sYHThF9SC4u1M/sendMessage`,
-{
-method: "POST",
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify({
-chat_id: chatId,
-text: message
-})
-}
-);
-
-const data = await response.json();
-
-if(data.ok){
-alert("تم إرسال الطلب بنجاح");
-}else{
-alert("فشل الإرسال");
-console.log(data);
-}
-
-} catch(error) {
-
-alert("حدث خطأ");
-console.log(error);
-
-}
-
-}
-
-</script>
-  <script>
 </script>
   
 </body>
