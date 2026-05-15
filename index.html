@@ -512,6 +512,26 @@ padding-bottom:90px;
   background-color: #333;
   transform: translateY(-3px);
 }
+  .buy-btn {
+  display: block;            /* يظهر ككتلة منفصلة */
+  width: 250px;              /* حجم الزر */
+  margin: 30px auto;         /* في وسط الصفحة */
+  background-color: #ff6b00; /* لون جذاب */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.buy-btn:hover {
+  background-color: #e55a00;
+  transform: translateY(-3px);
+}
 </style>
 
 <script type="application/ld+json">
@@ -1098,6 +1118,8 @@ topBtn.classList.remove("show");
 
 });
 </script>
+  <!-- زر شراء -->
+<a href="#orderForm" class="buy-btn">اشتري الآن 🛒</a>
   <!-- زر اضف للسلة مخفي -->
 <a href="#orderForm" class="add-to-cart-btn" style="display: none;">أضف للسلة</a>
 
