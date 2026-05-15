@@ -889,15 +889,27 @@ padding-bottom:90px;
   <script>
 document.getElementById("orderForm").addEventListener("submit", function() {
 
-  if (typeof ttq !== "undefined") {
+    if (typeof ttq !== "undefined") {
 
-    ttq.track('Purchase');
+        // جلب العرض المختار
+        var selectedOffer = document.getElementById("offer").value;
 
-    ttq.track('SubmitApplication');
+        // استخراج الرقم من العرض
+        var price = selectedOffer.match(/\d+/)[0];
 
-    ttq.track('InitiateCheckout');
+        // حدث الشراء
+        ttq.track('Purchase', {
+            value: price,
+            currency: 'SAR',
+            content_type: 'product'
+        });
 
-  }
+        // حدث إرسال الطلب
+        ttq.track('SubmitApplication');
+
+        // حدث بدء الدفع
+        ttq.track('InitiateCheckout');
+    }
 
 });
 </script>
