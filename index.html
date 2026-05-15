@@ -879,9 +879,7 @@ padding-bottom:90px;
 
 </section>
 
-<footer>
-جميع الحقوق محفوظة © رتّبها | Ratbha
-</footer>
+
 
 <div class="sticky-mobile">
 <a href="#order">
@@ -1067,108 +1065,147 @@ topBtn.classList.remove("show");
 
 });
 </script>
-  <footer class="siteFooter">
+<!-- Footer -->
+<footer class="siteFooter">
 
-<div class="footerContent">
+  <div class="footerContent">
 
-<h3>رتّبها | Ratbha</h3>
+    <h3>Ratbha | رتّبها</h3>
 
-<p>
-🚚 بعد تأكيد الطلب سيتواصل معك فريق الشحن لتأكيد البيانات وموعد التوصيل.
-</p>
+    <p>
+      🚚 بعد تأكيد الطلب سيتواصل معك فريق الشحن<br>
+      لتأكيد البيانات وموعد التوصيل.
+    </p>
 
-<div class="paymentMethods">
+    <!-- صور الدفع -->
+    <div class="payment-methods">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mada_Logo.svg" alt="Mada">
+      <img src="https://i.ibb.co/XxMcz7fY/FNZXGQ6-WQAgij-TF.webp" alt="Tabby">
 
-<img src="https://i.ibb.co/MkyB8VbY/1778803005555.webp" alt="Apple Pay">
+      <img src="https://i.ibb.co/jvnd9fcR/Ea1-Kx4-Sfp-K2-Vy3-Lx3a-VPv-ZKBMk-SM5dio2e-Kve-Twm.webp" alt="Tamara">
 
-<img src="https://i.ibb.co/jvnd9fcR/Ea1-Kx4-Sfp-K2-Vy3-Lx3a-VPv-ZKBMk-SM5dio2e-Kve-Twm.webp" alt="Mastercard">
+      <img src="https://i.ibb.co/MkyB8VbY/1778803005555.webp" alt="Mada">
 
-<img src="https://i.ibb.co/x0WS6HZ/images-2.webp" alt="Visa">
+      <img src="https://i.ibb.co/x0WS6HZ/images-2.webp" alt="Cash">
 
-</div>
+    </div>
 
-<div class="footerBadges">
+    <!-- المميزات -->
+    <div class="footerBadges">
+      <span>🚚 شحن سريع</span>
+      <span>💳 دفع آمن</span>
+      <span>🔒 بياناتك محمية</span>
+    </div>
 
-<span>💳 دفع آمن</span>
+    <div class="copyright">
+      © 2025 Ratbha - جميع الحقوق محفوظة
+    </div>
 
-<span>🚚 شحن سريع</span>
-
-<span>🔒 بياناتك محمية</span>
-
-</div>
-
-<p class="copyright">
-© 2025 جميع الحقوق محفوظة - Ratbha
-</p>
-
-</div>
+  </div>
 
 </footer>
 
 <style>
+
 .siteFooter{
-background:#111;
-color:#fff;
-padding:50px 20px;
-margin-top:60px;
-text-align:center;
+  background:#0b0b0b;
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  margin-top:60px;
 }
 
 .footerContent{
-max-width:1200px;
-margin:auto;
+  max-width:1200px;
+  margin:auto;
 }
 
 .siteFooter h3{
-font-size:28px;
-margin-bottom:15px;
+  font-size:38px;
+  margin-bottom:20px;
 }
 
 .siteFooter p{
-opacity:.9;
-line-height:1.9;
+  font-size:22px;
+  line-height:2;
+  opacity:.9;
 }
 
 .payment-methods{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
-gap:18px;
-margin-top:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:35px;
+  margin-bottom:35px;
 }
 
 .payment-methods img{
-width:130px;
-height:70px;
-object-fit:contain;
-background:#fff;
-padding:12px;
-border-radius:16px;
+  width:140px;
+  height:80px;
+  object-fit:contain;
+  background:#fff;
+  padding:10px;
+  border-radius:18px;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.payment-methods img:hover{
+  transform:scale(1.06);
 }
 
 .footerBadges{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-bottom:25px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:15px;
 }
 
 .footerBadges span{
-background:rgba(255,255,255,.08);
-padding:10px 18px;
-border-radius:50px;
-font-size:14px;
+  background:rgba(255,255,255,.08);
+  padding:14px 24px;
+  border-radius:50px;
+  font-size:18px;
 }
 
 .copyright{
-font-size:14px;
-opacity:.7;
-margin-top:20px;
+  margin-top:35px;
+  opacity:.7;
+  font-size:18px;
 }
-</style>
+
+/* الجوال */
+@media(max-width:768px){
+
+  .siteFooter h3{
+    font-size:30px;
+  }
+
+  .siteFooter p{
+    font-size:18px;
+    line-height:1.9;
+  }
+
+  .payment-methods{
+    gap:12px;
+  }
+
+  .payment-methods img{
+    width:120px;
+    height:70px;
+  }
+
+  .footerBadges span{
+    font-size:16px;
+    padding:12px 18px;
+  }
+
+}
+
+</style>  
+
 </body>
 </html>
