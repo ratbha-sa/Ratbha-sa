@@ -641,25 +641,25 @@ padding-bottom:90px;
 
 <div class="offer">
 <h3>قطعة واحدة</h3>
-<div class="price">133 ريال</div>
+<div class="price">133 SAR</div>
 </div>
 
 <div class="offer best">
 <h3>قطعتين</h3>
-<div class="price">184 ريال</div>
-<div class="save">وفر 82 ريال</div>
+<div class="price">184 SAR</div>
+<div class="save">وفر 82 SAR</div>
 </div>
 
 <div class="offer">
 <h3>3 قطع</h3>
-<div class="price">229 ريال</div>
-<div class="save">وفر 170 ريال</div>
+<div class="price">229 SAR</div>
+<div class="save">وفر 170 SAR</div>
 </div>
 
 <div class="offer">
 <h3>4 قطع</h3>
-<div class="price">308 ريال</div>
-<div class="save">وفر 224 ريال</div>
+<div class="price">308 SAR</div>
+<div class="save">وفر 224 SAR</div>
 </div>
 
 </div>
@@ -858,26 +858,26 @@ padding-bottom:90px;
 
 <option value="">اختر العرض</option>
 
-<option value="قطعة واحدة - 133 ريال">
-قطعة واحدة - 133 ريال
+<option value="قطعة واحدة - 133 SAR">
+قطعة واحدة - 133 SAR
 </option>
 
-<option value="قطعتين - 184 ريال">
-قطعتين - 184 ريال
+<option value="قطعتين - 184 SAR">
+قطعتين - 184 SAR
 </option>
 
-<option value="3 قطع - 229 ريال">
-3 قطع - 229 ريال
+<option value="3 قطع - 229 SAR">
+3 قطع - 229 SAR
 </option>
 
-<option value="4 قطع - 308 ريال">
-4 قطع - 308 ريال
+<option value="4 قطع - 308 SAR">
+4 قطع - 308 SAR
 </option>
 
 </select>
 
 <div class="summary" id="summaryBox">
-السعر النهائي: 133 ريال
+السعر النهائي: 133 SAR
 </div>
 
 <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
@@ -915,19 +915,19 @@ offer.addEventListener("change",()=>{
 const value = offer.value;
 
 if(value.includes("133")){
-summaryBox.innerHTML = "السعر النهائي: 133 ريال";
+summaryBox.innerHTML = "السعر النهائي: 133 SAR";
 }
 
 if(value.includes("184")){
-summaryBox.innerHTML = "السعر النهائي: 184 ريال";
+summaryBox.innerHTML = "السعر النهائي: 184 SAR";
 }
 
 if(value.includes("229")){
-summaryBox.innerHTML = "السعر النهائي: 229 ريال";
+summaryBox.innerHTML = "السعر النهائي: 229 SAR";
 }
 
 if(value.includes("308")){
-summaryBox.innerHTML = "السعر النهائي: 308 ريال";
+summaryBox.innerHTML = "السعر النهائي: 308 SAR";
 }
 
 });
@@ -987,7 +987,7 @@ document.getElementById("successMessage").style.display="block";
 
 form.reset();
 
-summaryBox.innerHTML = "السعر النهائي: SAR133 ريال";
+summaryBox.innerHTML = "السعر النهائي: 133 SAR";
 
 localStorage.removeItem("orderData");
 
