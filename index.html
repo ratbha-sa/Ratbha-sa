@@ -908,9 +908,11 @@ document.getElementById("orderForm").addEventListener("submit", function() {
         ttq.track('SubmitApplication');
 
         // حدث بدء الدفع
-        ttq.track('InitiateCheckout');
-    }
-
+        ttq.track('InitiateCheckout', {
+    content_id: 'shoe-cabinet',
+    content_type: 'product',
+    value: price,
+    currency: 'SAR'
 });
 </script>
 
