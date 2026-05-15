@@ -899,11 +899,11 @@ document.getElementById("orderForm").addEventListener("submit", function() {
 
         // حدث الشراء
         ttq.track('Purchase', {
-            value: price,
-            currency: 'SAR',
-            content_type: 'product'
-        });
-
+    value: price,
+    currency: 'SAR',
+    content_type: 'product',
+    content_id: 'shoe-cabinet'
+});
         // حدث إرسال الطلب
         ttq.track('SubmitApplication');
 
