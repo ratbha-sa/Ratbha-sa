@@ -885,21 +885,22 @@ padding-bottom:90px;
 <button type="submit" class="submit-btn" id="submitBtn">
 تأكيد الطلب
 </button>
+  
   <script>
-document.getElementById("submitBtn").addEventListener("click", function() {
+document.getElementById("orderForm").addEventListener("submit", function() {
 
-  // حدث شراء
   if (typeof ttq !== "undefined") {
+
     ttq.track('Purchase');
-  }
 
-  // حدث إرسال طلب
-  if (typeof ttq !== "undefined") {
     ttq.track('SubmitApplication');
+
+    ttq.track('InitiateCheckout');
+
   }
 
 });
-  </script>
+</script>
 
 </form>
 
