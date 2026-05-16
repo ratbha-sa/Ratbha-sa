@@ -9,20 +9,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
 
-  ttq.load('D83ST13C77U1B74FN100');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
-
-  <!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
   ttq.load('D83KOJBC77UD0UBIM0AG');
   ttq.page();
 }(window, document, 'ttq');
@@ -899,51 +885,7 @@ padding-bottom:90px;
 تأكيد الطلب
 </button>
   
-  <script>
-
-document.getElementById("orderForm").addEventListener("submit", function(event) {
-
-event.preventDefault();
-
-if (typeof ttq !== "undefined") {
-
-var selectedOffer = document.getElementById("offer").value;
-
-var numbers = selectedOffer.match(/\d+/g);
-
-var price = Number(numbers[numbers.length - 1]);
-
-// حدث إرسال الطلب
-ttq.track('Lead', {
-content_id: 'shoe-cabinet',
-content_type: 'product',
-value: price,
-currency: 'SAR'
-});
-
-// حدث شراء اختياري
-ttq.track('Purchase', {
-content_id: 'shoe-cabinet',
-content_type: 'product',
-value: price,
-currency: 'SAR'
-});
-
-}
-
-// إعطاء البيكسل وقت للإرسال
-setTimeout(() => {
-document.getElementById("orderForm").submit();
-}, 800);
-
-});
-
-  </script>
-
 </form>
-
-</div>
-
 </div>
 
 </section>
@@ -1004,7 +946,40 @@ answer.style.display === "block"
 form.addEventListener("submit", async function(e){
 
 e.preventDefault();
+// TikTok Events
+if (typeof ttq !== "undefined") {
 
+const selectedOffer = document.getElementById("offer").value;
+
+const numbers = selectedOffer.match(/\d+/g);
+
+const price = Number(numbers[numbers.length - 1]);
+
+// حدث إرسال الطلب الحقيقي
+ttq.track('SubmitApplication', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
+});
+
+// حدث بدء الدفع
+ttq.track('InitiateCheckout', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
+});
+
+// حدث Lead
+ttq.track('Lead', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
+});
+
+}
 const submitBtn = document.getElementById("submitBtn");
 
 submitBtn.disabled = true;
