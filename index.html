@@ -901,47 +901,40 @@ padding-bottom:90px;
   
   <script>
 
-window.addEventListener("load", function () {
-
-const form = document.querySelector("form");
-
-if (!form) {
-console.log("FORM NOT FOUND");
-return;
-}
-
-form.addEventListener("submit", function (event) {
+document.getElementById("orderForm").addEventListener("submit", function(event) {
 
 event.preventDefault();
 
-try {
-
 if (typeof ttq !== "undefined") {
 
-ttq.track('Lead');
+var selectedOffer = document.getElementById("offer").value;
 
-ttq.track('Purchase', {
-value: 133,
+var numbers = selectedOffer.match(/\d+/g);
+
+var price = Number(numbers[numbers.length - 1]);
+
+// حدث إرسال الطلب
+ttq.track('Lead', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
 currency: 'SAR'
 });
 
-console.log("TIKTOK EVENTS SENT");
-
-}
-
-} catch(err) {
-
-console.log(err);
-
-}
-
-setTimeout(() => {
-
-form.submit();
-
-}, 1500);
-
+// حدث شراء اختياري
+ttq.track('Purchase', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
 });
+
+}
+
+// إعطاء البيكسل وقت للإرسال
+setTimeout(() => {
+document.getElementById("orderForm").submit();
+}, 800);
 
 });
 
