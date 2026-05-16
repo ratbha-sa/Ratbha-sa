@@ -900,36 +900,45 @@ padding-bottom:90px;
 </button>
   
   <script>
-document.getElementById("orderForm").addEventListener("submit", function() {
+do<script>
 
-    if (typeof ttq !== "undefined") {
+document.getElementById("orderForm").addEventListener("submit", function(event) {
 
-        // جلب العرض المختار
-        var selectedOffer = document.getElementById("offer").value;
+event.preventDefault();
 
-        // استخراج الرقم من العرض
-        var numbers = selectedOffer.match(/\d+/g);
-var price = numbers[numbers.length - 1];
+if (typeof ttq !== "undefined") {
 
-        // حدث الشراء
-        ttq.track('Purchase', {
-    value: price,
-    currency: 'SAR',
-    content_type: 'product',
-    content_id: 'shoe-cabinet'
+var selectedOffer = document.getElementById("offer").value;
+
+var numbers = selectedOffer.match(/\d+/g);
+
+var price = Number(numbers[numbers.length - 1]);
+
+// حدث إرسال الطلب
+ttq.track('Lead', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
 });
-        // حدث إرسال الطلب
-        ttq.track('SubmitApplication');
 
-        // حدث بدء الدفع
-        ttq.track('InitiateCheckout', {
-    content_id: 'shoe-cabinet',
-    content_type: 'product',
-    value: price,
-    currency: 'SAR'
+// حدث شراء اختياري
+ttq.track('Purchase', {
+content_id: 'shoe-cabinet',
+content_type: 'product',
+value: price,
+currency: 'SAR'
 });
-      }
+
+}
+
+// إعطاء البيكسل وقت للإرسال
+setTimeout(() => {
+document.getElementById("orderForm").submit();
+}, 800);
+
 });
+
 </script>
 
 </form>
