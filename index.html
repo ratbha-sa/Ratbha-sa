@@ -908,7 +908,8 @@ document.getElementById("orderForm").addEventListener("submit", function() {
         var selectedOffer = document.getElementById("offer").value;
 
         // استخراج الرقم من العرض
-        var price = selectedOffer.match(/\d+/)[0];
+        var numbers = selectedOffer.match(/\d+/g);
+var price = numbers[numbers.length - 1];
 
         // حدث الشراء
         ttq.track('Purchase', {
