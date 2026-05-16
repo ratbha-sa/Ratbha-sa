@@ -11,6 +11,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   ttq.load('D83KOJBC77UD0UBIM0AG');
   ttq.page();
+  ttq.track('ViewContent', {
+content_id: 'shoe-cabinet',
+content_type: 'product'
+});
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
@@ -955,21 +959,7 @@ const numbers = selectedOffer.match(/\d+/g);
 
 const price = Number(numbers[numbers.length - 1]);
 
-// حدث إرسال الطلب الحقيقي
-ttq.track('SubmitApplication', {
-content_id: 'shoe-cabinet',
-content_type: 'product',
-value: price,
-currency: 'SAR'
-});
 
-// حدث بدء الدفع
-ttq.track('InitiateCheckout', {
-content_id: 'shoe-cabinet',
-content_type: 'product',
-value: price,
-currency: 'SAR'
-});
 
 // حدث Lead
 ttq.track('Lead', {
